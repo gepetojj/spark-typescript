@@ -1,6 +1,6 @@
 {
   "name": "spark",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The official TypeScript library for the Spark CRM API",
   "author": "Spark CRM <suporte@crmspark.com.br>",
   "types": "dist/index.d.ts",
