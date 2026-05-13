@@ -1,11 +1,11 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import type { Spark } from '../client';
+import type { SparkCRM } from '../client';
 
 export abstract class APIResource {
-  protected _client: Spark;
+  protected _client: SparkCRM;
 
-  constructor(client: Spark) {
+  constructor(client: SparkCRM) {
     this._client = client;
   }
 }

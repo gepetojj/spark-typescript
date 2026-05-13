@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { type Spark } from '../client';
+import { type SparkCRM } from '../client';
 
 import { type PromiseOrValue } from '../internal/types';
 import { APIResponseProps, defaultParseResponse } from '../internal/parse';
@@ -11,13 +11,13 @@ import { APIResponseProps, defaultParseResponse } from '../internal/parse';
  */
 export class APIPromise<T> extends Promise<T> {
   private parsedPromise: Promise<T> | undefined;
-  #client: Spark;
+  #client: SparkCRM;
 
   constructor(
-    client: Spark,
+    client: SparkCRM,
     private responsePromise: Promise<APIResponseProps>,
     private parseResponse: (
-      client: Spark,
+      client: SparkCRM,
       props: APIResponseProps,
     ) => PromiseOrValue<T> = defaultParseResponse,
   ) {

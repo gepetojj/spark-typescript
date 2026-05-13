@@ -1,8 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import Spark from 'spark';
+import SparkCRM from 'spark';
 
-const client = new Spark({
+const client = new SparkCRM({
   apiKey: 'My API Key',
   baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
 });
@@ -37,6 +37,6 @@ describe('resource entrypoints', () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
       client.entrypoints.list({ platform: 'whatsapp' }, { path: '/_stainless_unknown_path' }),
-    ).rejects.toThrow(Spark.NotFoundError);
+    ).rejects.toThrow(SparkCRM.NotFoundError);
   });
 });

@@ -2,13 +2,13 @@
 
 import { castToError } from '../internal/errors';
 
-export class SparkError extends Error {}
+export class SparkCRMError extends Error {}
 
 export class APIError<
   TStatus extends number | undefined = number | undefined,
   THeaders extends Headers | undefined = Headers | undefined,
   TError extends Object | undefined = Object | undefined,
-> extends SparkError {
+> extends SparkCRMError {
   /** HTTP status for the response that caused the error */
   readonly status: TStatus;
   /** HTTP headers for the response that caused the error */
