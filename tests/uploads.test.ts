@@ -1,6 +1,6 @@
 import fs from 'fs';
-import type { ResponseLike } from 'spark/internal/to-file';
-import { toFile } from 'spark/core/uploads';
+import type { ResponseLike } from 'sparkcrm/internal/to-file';
+import { toFile } from 'sparkcrm/core/uploads';
 import { File } from 'node:buffer';
 
 class MyClass {
@@ -97,7 +97,7 @@ describe('missing File error message', () => {
   });
 
   test('is thrown', async () => {
-    const uploads = await import('spark/core/uploads');
+    const uploads = await import('sparkcrm/core/uploads');
     await expect(
       uploads.toFile(mockResponse({ url: 'https://example.com/my/audio.mp3' })),
     ).rejects.toMatchInlineSnapshot(

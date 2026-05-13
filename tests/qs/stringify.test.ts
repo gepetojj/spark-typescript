@@ -1,7 +1,7 @@
 import iconv from 'iconv-lite';
-import { stringify } from 'spark/internal/qs';
-import { encode } from 'spark/internal/qs/utils';
-import { StringifyOptions } from 'spark/internal/qs/types';
+import { stringify } from 'sparkcrm/internal/qs';
+import { encode } from 'sparkcrm/internal/qs/utils';
+import { StringifyOptions } from 'sparkcrm/internal/qs/types';
 import { empty_test_cases } from './empty-keys-cases';
 import assert from 'assert';
 
