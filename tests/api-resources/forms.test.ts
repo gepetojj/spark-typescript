@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import SparkCRM from 'spark';
+import SparkCRM from 'sparkcrm';
 
 const client = new SparkCRM({
   apiKey: 'My API Key',

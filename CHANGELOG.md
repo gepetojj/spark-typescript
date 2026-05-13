@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.0.3 (2026-05-13)
+
+Full Changelog: [v0.0.2...v0.0.3](https://github.com/gepetojj/spark-typescript-sdk/compare/v0.0.2...v0.0.3)
+
+### Chores
+
+* update SDK settings ([a197520](https://github.com/gepetojj/spark-typescript-sdk/commit/a1975200da8c69dc23585ac0885367434c7ec99e))
+
 ## 0.0.2 (2026-05-13)
 
 Full Changelog: [v0.0.1...v0.0.2](https://github.com/gepetojj/spark-typescript-sdk/compare/v0.0.1...v0.0.2)

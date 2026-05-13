@@ -1,10 +1,10 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIPromise } from 'spark/core/api-promise';
+import { APIPromise } from 'sparkcrm/core/api-promise';
 
 import util from 'node:util';
-import SparkCRM from 'spark';
-import { APIUserAbortError } from 'spark';
+import SparkCRM from 'sparkcrm';
+import { APIUserAbortError } from 'sparkcrm';
 const defaultFetch = fetch;
 
 describe('instantiate client', () => {
