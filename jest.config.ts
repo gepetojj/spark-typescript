@@ -7,8 +7,8 @@ const config: JestConfigWithTsJest = {
     '^.+\\.(t|j)sx?$': ['@swc/jest', { sourceMaps: 'inline' }],
   },
   moduleNameMapper: {
-    '^spark$': '<rootDir>/src/index.ts',
-    '^spark/(.*)$': '<rootDir>/src/$1',
+    '^sparkcrm$': '<rootDir>/src/index.ts',
+    '^sparkcrm/(.*)$': '<rootDir>/src/$1',
   },
   modulePathIgnorePatterns: [
     '<rootDir>/ecosystem-tests/',

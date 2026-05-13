@@ -1,5 +1,5 @@
-import { multipartFormRequestOptions, createForm } from 'spark/internal/uploads';
-import { toFile } from 'spark/core/uploads';
+import { multipartFormRequestOptions, createForm } from 'sparkcrm/internal/uploads';
+import { toFile } from 'sparkcrm/core/uploads';
 
 describe('form data validation', () => {
   test('valid values do not error', async () => {

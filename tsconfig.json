@@ -8,8 +8,8 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "paths": {
-      "spark/*": ["./src/*"],
-      "spark": ["./src/index.ts"]
+      "sparkcrm/*": ["./src/*"],
+      "sparkcrm": ["./src/index.ts"]
     },
     "noEmit": true,
 
