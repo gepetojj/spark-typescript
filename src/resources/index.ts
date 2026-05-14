@@ -18,3 +18,12 @@ export {
   type MessagingUploadMediaResponse,
   type MessagingUploadMediaParams,
 } from './messaging/messaging';
+export {
+  Webhooks,
+  type ChatsCreatedWebhook,
+  type ChatsCreatedWebhookPayload,
+  type MessagesReceivedWebhook,
+  type MessagesReceivedWebhookPayload,
+  type MessagesSentWebhook,
+  type MessagesSentWebhookPayload,
+} from './webhooks';
