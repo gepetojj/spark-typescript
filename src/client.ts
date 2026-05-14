@@ -31,6 +31,15 @@ import {
   Forms,
 } from './resources/forms';
 import {
+  ChatsCreatedWebhook,
+  ChatsCreatedWebhookPayload,
+  MessagesReceivedWebhook,
+  MessagesReceivedWebhookPayload,
+  MessagesSentWebhook,
+  MessagesSentWebhookPayload,
+  Webhooks,
+} from './resources/webhooks';
+import {
   Messaging,
   MessagingUploadMediaParams,
   MessagingUploadMediaResponse,
@@ -744,17 +753,29 @@ export class SparkCRM {
 
   static toFile = Uploads.toFile;
 
+  webhooks: API.Webhooks = new API.Webhooks(this);
   entrypoints: API.Entrypoints = new API.Entrypoints(this);
   forms: API.Forms = new API.Forms(this);
   messaging: API.Messaging = new API.Messaging(this);
 }
 
+SparkCRM.Webhooks = Webhooks;
 SparkCRM.Entrypoints = Entrypoints;
 SparkCRM.Forms = Forms;
 SparkCRM.Messaging = Messaging;
 
 export declare namespace SparkCRM {
   export type RequestOptions = Opts.RequestOptions;
+
+  export {
+    Webhooks as Webhooks,
+    type ChatsCreatedWebhook as ChatsCreatedWebhook,
+    type ChatsCreatedWebhookPayload as ChatsCreatedWebhookPayload,
+    type MessagesReceivedWebhook as MessagesReceivedWebhook,
+    type MessagesReceivedWebhookPayload as MessagesReceivedWebhookPayload,
+    type MessagesSentWebhook as MessagesSentWebhook,
+    type MessagesSentWebhookPayload as MessagesSentWebhookPayload,
+  };
 
   export {
     Entrypoints as Entrypoints,
