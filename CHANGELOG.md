@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0 (2026-05-14)
+
+Full Changelog: [v0.0.4...v0.1.0](https://github.com/gepetojj/spark-typescript/compare/v0.0.4...v0.1.0)
+
+### Features
+
+* **api:** adiciona tipagem para webhooks ([00b9dc2](https://github.com/gepetojj/spark-typescript/commit/00b9dc2ac9aa21bd617814e286873b194bb6e6b1))
+
+
+### Chores
+
+* update SDK settings ([6597176](https://github.com/gepetojj/spark-typescript/commit/65971765f25ea0c5808989f6e6a32479902691cf))
+
 ## 0.0.4 (2026-05-14)
 
 Full Changelog: [v0.0.3...v0.0.4](https://github.com/gepetojj/spark-typescript/compare/v0.0.3...v0.0.4)
