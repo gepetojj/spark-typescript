@@ -1,3 +1,14 @@
+# Webhooks
+
+Types:
+
+- <code><a href="./src/resources/webhooks.ts">ChatsCreatedWebhook</a></code>
+- <code><a href="./src/resources/webhooks.ts">ChatsCreatedWebhookPayload</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessagesReceivedWebhook</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessagesReceivedWebhookPayload</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessagesSentWebhook</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessagesSentWebhookPayload</a></code>
+
 # Entrypoints
 
 Types:
