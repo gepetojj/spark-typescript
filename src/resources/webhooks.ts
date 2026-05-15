@@ -31,6 +31,8 @@ export interface MessagesReceivedWebhook {
 export interface MessagesReceivedWebhookPayload {
   chatId: string;
 
+  entrypointId: string;
+
   message: MessagesReceivedWebhookPayload.Message;
 
   occurredAt: string;
