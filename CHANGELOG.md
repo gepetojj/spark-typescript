@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0 (2026-05-15)
+
+Full Changelog: [v0.1.0...v0.2.0](https://github.com/gepetojj/spark-typescript/compare/v0.1.0...v0.2.0)
+
+### Features
+
+* **api:** api update ([38be566](https://github.com/gepetojj/spark-typescript/commit/38be566f01ea2a30e60cb3f32744227bd9fc3e1a))
+
 ## 0.1.0 (2026-05-14)
 
 Full Changelog: [v0.0.4...v0.1.0](https://github.com/gepetojj/spark-typescript/compare/v0.0.4...v0.1.0)
