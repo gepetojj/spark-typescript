@@ -29,6 +29,8 @@ export interface MessagesReceivedWebhook {
 }
 
 export interface MessagesReceivedWebhookPayload {
+  chat: MessagesReceivedWebhookPayload.Chat;
+
   chatId: string;
 
   entrypointId: string;
@@ -41,6 +43,28 @@ export interface MessagesReceivedWebhookPayload {
 }
 
 export namespace MessagesReceivedWebhookPayload {
+  export interface Chat {
+    id: string;
+
+    avatarUrl: string | null;
+
+    createdAt: string;
+
+    entrypointId: string;
+
+    externalId: string | null;
+
+    kind: 'dm' | 'group';
+
+    name: string | null;
+
+    platform: 'whatsapp' | 'whatsapp_lite' | 'instagram' | 'telegram';
+
+    status: 'ongoing' | 'ignored' | 'completed';
+
+    updatedAt: string;
+  }
+
   export interface Message {
     id: string;
 
@@ -145,6 +169,8 @@ export interface MessagesSentWebhook {
 }
 
 export interface MessagesSentWebhookPayload {
+  chat: MessagesSentWebhookPayload.Chat;
+
   chatId: string;
 
   message: MessagesSentWebhookPayload.Message;
@@ -165,6 +191,28 @@ export interface MessagesSentWebhookPayload {
 }
 
 export namespace MessagesSentWebhookPayload {
+  export interface Chat {
+    id: string;
+
+    avatarUrl: string | null;
+
+    createdAt: string;
+
+    entrypointId: string;
+
+    externalId: string | null;
+
+    kind: 'dm' | 'group';
+
+    name: string | null;
+
+    platform: 'whatsapp' | 'whatsapp_lite' | 'instagram' | 'telegram';
+
+    status: 'ongoing' | 'ignored' | 'completed';
+
+    updatedAt: string;
+  }
+
   export interface Message {
     id: string;
 
