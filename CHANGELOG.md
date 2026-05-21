@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.3.1 (2026-05-21)
+
+Full Changelog: [v0.3.0...v0.3.1](https://github.com/gepetojj/spark-typescript/compare/v0.3.0...v0.3.1)
+
+### Bug Fixes
+
+* **typescript:** upgrade tsc-multi so that it works with Node 26 ([2e00c3c](https://github.com/gepetojj/spark-typescript/commit/2e00c3ccbce6256a8b6877a7bdd4b31ab6cd3f71))
+
+
+### Chores
+
+* **tests:** remove redundant File import ([0304690](https://github.com/gepetojj/spark-typescript/commit/03046900c2498463929d7298f4a9bed266fa7870))
+
 ## 0.3.0 (2026-05-17)
 
 Full Changelog: [v0.2.0...v0.3.0](https://github.com/gepetojj/spark-typescript/compare/v0.2.0...v0.3.0)
