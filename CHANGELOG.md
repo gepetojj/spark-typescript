@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.0 (2026-05-27)
+
+Full Changelog: [v0.3.1...v0.4.0](https://github.com/gepetojj/spark-typescript/compare/v0.3.1...v0.4.0)
+
+### Features
+
+* initial stlc build ([b2233ce](https://github.com/gepetojj/spark-typescript/commit/b2233ce1bb20dcd8956a070f322cb5946950928a))
+
 ## 0.3.1 (2026-05-21)
 
 Full Changelog: [v0.3.0...v0.3.1](https://github.com/gepetojj/spark-typescript/compare/v0.3.0...v0.3.1)
