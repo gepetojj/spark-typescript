@@ -37,6 +37,7 @@ import {
   MessagesReceivedWebhookPayload,
   MessagesSentWebhook,
   MessagesSentWebhookPayload,
+  SparkWebhookBody,
   Webhooks,
 } from './resources/webhooks';
 import {
@@ -775,6 +776,7 @@ export declare namespace SparkCRM {
     type MessagesReceivedWebhookPayload as MessagesReceivedWebhookPayload,
     type MessagesSentWebhook as MessagesSentWebhook,
     type MessagesSentWebhookPayload as MessagesSentWebhookPayload,
+    type SparkWebhookBody as SparkWebhookBody,
   };
 
   export {
