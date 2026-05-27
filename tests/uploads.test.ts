@@ -1,7 +1,6 @@
 import fs from 'fs';
 import type { ResponseLike } from 'sparkcrm/internal/to-file';
 import { toFile } from 'sparkcrm/core/uploads';
-import { File } from 'node:buffer';
 
 class MyClass {
   name: string = 'foo';
