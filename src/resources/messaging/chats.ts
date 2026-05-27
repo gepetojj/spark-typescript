@@ -59,6 +59,8 @@ export namespace ChatListMessagesResponse {
 
     instagram?: Record.UnionMember0 | Record.UnionMember1 | Record.UnionMember2 | null;
 
+    location?: Record.Location | null;
+
     media?: Record.Media | null;
 
     replyToId?: string | null;
@@ -119,6 +121,18 @@ export namespace ChatListMessagesResponse {
       kind: 'private_reply';
 
       parentCommentId: string;
+    }
+
+    export interface Location {
+      latitude: number;
+
+      longitude: number;
+
+      address?: string;
+
+      name?: string;
+
+      url?: string;
     }
 
     export interface Media {

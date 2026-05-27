@@ -26,4 +26,5 @@ export {
   type MessagesReceivedWebhookPayload,
   type MessagesSentWebhook,
   type MessagesSentWebhookPayload,
+  type SparkWebhookBody,
 } from './webhooks';
