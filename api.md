@@ -8,6 +8,7 @@ Types:
 - <code><a href="./src/resources/webhooks.ts">MessagesReceivedWebhookPayload</a></code>
 - <code><a href="./src/resources/webhooks.ts">MessagesSentWebhook</a></code>
 - <code><a href="./src/resources/webhooks.ts">MessagesSentWebhookPayload</a></code>
+- <code><a href="./src/resources/webhooks.ts">SparkWebhookBody</a></code>
 
 # Entrypoints
 
