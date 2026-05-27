@@ -84,8 +84,6 @@ export namespace MessagesReceivedWebhookPayload {
 
     instagram?: Message.UnionMember0 | Message.UnionMember1 | Message.UnionMember2 | null;
 
-    location?: Message.Location | null;
-
     media?: Message.Media | null;
 
     replyToId?: string | null;
@@ -136,18 +134,6 @@ export namespace MessagesReceivedWebhookPayload {
       kind: 'private_reply';
 
       parentCommentId: string;
-    }
-
-    export interface Location {
-      latitude: number;
-
-      longitude: number;
-
-      address?: string;
-
-      name?: string;
-
-      url?: string;
     }
 
     export interface Media {
@@ -232,8 +218,6 @@ export namespace MessagesSentWebhookPayload {
 
     instagram?: Message.UnionMember0 | Message.UnionMember1 | Message.UnionMember2 | null;
 
-    location?: Message.Location | null;
-
     media?: Message.Media | null;
 
     replyToId?: string | null;
@@ -284,18 +268,6 @@ export namespace MessagesSentWebhookPayload {
       kind: 'private_reply';
 
       parentCommentId: string;
-    }
-
-    export interface Location {
-      latitude: number;
-
-      longitude: number;
-
-      address?: string;
-
-      name?: string;
-
-      url?: string;
     }
 
     export interface Media {
