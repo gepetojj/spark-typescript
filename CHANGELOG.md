@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/gepetojj/spark-typescript/compare/v0.4.0...v0.4.1) (2026-06-05)
+
+
+### Bug Fixes
+
+* atualiza package.json ([3f8507e](https://github.com/gepetojj/spark-typescript/commit/3f8507ef2580c9470208a76f6a3d622d3ab8ee70))
+
 ## [0.4.0](https://github.com/gepetojj/spark-typescript/compare/v0.3.1...v0.4.0) (2026-05-27)
 
 
