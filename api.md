@@ -56,3 +56,4 @@ Methods:
 
 - <code title="get /v1/messaging/chats/{chatId}">client.messaging.chats.<a href="./src/resources/messaging/chats.ts">listMessages</a>(chatID, { ...params }) -> ChatListMessagesResponse</code>
 - <code title="post /v1/messaging/chats/{chatId}">client.messaging.chats.<a href="./src/resources/messaging/chats.ts">sendMessage</a>(chatID, { ...params }) -> void</code>
+- <code title="post /v1/messaging/chats/{chatId}/templates">client.messaging.chats.<a href="./src/resources/messaging/chats.ts">sendMessageTemplate</a>(chatID, { ...params }) -> void</code>

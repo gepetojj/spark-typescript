@@ -29,6 +29,23 @@ export class Chats extends APIResource {
       headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
     });
   }
+
+  /**
+   * Envia um template cadastrado no Spark. Preencha variáveis manuais em
+   * `commonVariables` (var1, var2, …). Variáveis automáticas (dados do chat) são
+   * resolvidas pelo Spark.
+   */
+  sendMessageTemplate(
+    chatID: string,
+    body: ChatSendMessageTemplateParams,
+    options?: RequestOptions,
+  ): APIPromise<void> {
+    return this._client.post(path`/v1/messaging/chats/${chatID}/templates`, {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+    });
+  }
 }
 
 export interface ChatListMessagesResponse {
@@ -175,10 +192,19 @@ export interface ChatSendMessageParams {
   text?: string;
 }
 
+export interface ChatSendMessageTemplateParams {
+  templateId: string;
+
+  commonVariables?: { [key: string]: string };
+
+  replyToId?: string;
+}
+
 export declare namespace Chats {
   export {
     type ChatListMessagesResponse as ChatListMessagesResponse,
     type ChatListMessagesParams as ChatListMessagesParams,
     type ChatSendMessageParams as ChatSendMessageParams,
+    type ChatSendMessageTemplateParams as ChatSendMessageTemplateParams,
   };
 }

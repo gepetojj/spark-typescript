@@ -2,7 +2,13 @@
 
 import { APIResource } from '../../core/resource';
 import * as ChatsAPI from './chats';
-import { ChatListMessagesParams, ChatListMessagesResponse, ChatSendMessageParams, Chats } from './chats';
+import {
+  ChatListMessagesParams,
+  ChatListMessagesResponse,
+  ChatSendMessageParams,
+  ChatSendMessageTemplateParams,
+  Chats,
+} from './chats';
 import { APIPromise } from '../../core/api-promise';
 import { type Uploadable } from '../../core/uploads';
 import { RequestOptions } from '../../internal/request-options';
@@ -65,5 +71,6 @@ export declare namespace Messaging {
     type ChatListMessagesResponse as ChatListMessagesResponse,
     type ChatListMessagesParams as ChatListMessagesParams,
     type ChatSendMessageParams as ChatSendMessageParams,
+    type ChatSendMessageTemplateParams as ChatSendMessageTemplateParams,
   };
 }
