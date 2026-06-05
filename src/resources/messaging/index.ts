@@ -5,5 +5,6 @@ export {
   type ChatListMessagesResponse,
   type ChatListMessagesParams,
   type ChatSendMessageParams,
+  type ChatSendMessageTemplateParams,
 } from './chats';
 export { Messaging, type MessagingUploadMediaResponse, type MessagingUploadMediaParams } from './messaging';
