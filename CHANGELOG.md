@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.5.0](https://github.com/gepetojj/spark-typescript/compare/v0.4.1...v0.5.0) (2026-06-10)
+
+
+### Bug Fixes
+
+* resolve conflito do package.json ([c4d8056](https://github.com/gepetojj/spark-typescript/commit/c4d805672788fe2528efae98a288ebd74ea0cd04))
+
+
+### Chores
+
+* release 0.5.0 ([c5c320a](https://github.com/gepetojj/spark-typescript/commit/c5c320a9826749bbe0c71b108aade5cad1b9b031))
+
 ## [0.4.1](https://github.com/gepetojj/spark-typescript/compare/v0.4.0...v0.4.1) (2026-06-05)
 
 
