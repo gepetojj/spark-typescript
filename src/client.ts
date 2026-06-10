@@ -17,6 +17,7 @@ import * as Errors from './core/error';
 import * as Uploads from './core/uploads';
 import * as API from './resources/index';
 import { APIPromise } from './core/api-promise';
+import { ChatUpsertParams, ChatUpsertResponse, Chats } from './resources/chats';
 import {
   EntrypointListParams,
   EntrypointListResponse,
@@ -758,12 +759,14 @@ export class SparkCRM {
   entrypoints: API.Entrypoints = new API.Entrypoints(this);
   forms: API.Forms = new API.Forms(this);
   messaging: API.Messaging = new API.Messaging(this);
+  chats: API.Chats = new API.Chats(this);
 }
 
 SparkCRM.Webhooks = Webhooks;
 SparkCRM.Entrypoints = Entrypoints;
 SparkCRM.Forms = Forms;
 SparkCRM.Messaging = Messaging;
+SparkCRM.Chats = Chats;
 
 export declare namespace SparkCRM {
   export type RequestOptions = Opts.RequestOptions;
@@ -798,5 +801,11 @@ export declare namespace SparkCRM {
     Messaging as Messaging,
     type MessagingUploadMediaResponse as MessagingUploadMediaResponse,
     type MessagingUploadMediaParams as MessagingUploadMediaParams,
+  };
+
+  export {
+    Chats as Chats,
+    type ChatUpsertResponse as ChatUpsertResponse,
+    type ChatUpsertParams as ChatUpsertParams,
   };
 }
