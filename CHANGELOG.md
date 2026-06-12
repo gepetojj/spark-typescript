@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.5.1](https://github.com/gepetojj/spark-typescript/compare/v0.5.0...v0.5.1) (2026-06-12)
+
+
+### Bug Fixes
+
+* resolve conflito de versão no package.json ([f8d844e](https://github.com/gepetojj/spark-typescript/commit/f8d844e0b4e2eb21ce53f6d947073cd09aa3bc61))
+* resolve conflitos ([e40f2e4](https://github.com/gepetojj/spark-typescript/commit/e40f2e427b74ef24e1dafd5890d9606065ec02b7))
+
+
+### Chores
+
+* reconcile stlc sealed integrated commit with main ([b2b1625](https://github.com/gepetojj/spark-typescript/commit/b2b16252dc6219f635f2c4c0424ccf94711ed5cc))
+
 ## [0.5.0](https://github.com/gepetojj/spark-typescript/compare/v0.4.1...v0.5.0) (2026-06-10)
 
 
