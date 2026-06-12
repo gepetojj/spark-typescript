@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.5.2](https://github.com/gepetojj/spark-typescript/compare/v0.5.1...v0.5.2) (2026-06-12)
+
+
+### Bug Fixes
+
+* formata arquivos ([5881e39](https://github.com/gepetojj/spark-typescript/commit/5881e398e7df597b2faaeead6184c819b3935765))
+
+
+### Chores
+
+* merge release 0.5.1 with stlc integrated changes ([ec4cf71](https://github.com/gepetojj/spark-typescript/commit/ec4cf717f4b0158e3c191e858a75eb48de7e5f33))
+
 ## [0.5.1](https://github.com/gepetojj/spark-typescript/compare/v0.5.0...v0.5.1) (2026-06-12)
 
 
