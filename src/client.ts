@@ -17,7 +17,13 @@ import * as Errors from './core/error';
 import * as Uploads from './core/uploads';
 import * as API from './resources/index';
 import { APIPromise } from './core/api-promise';
-import { ChatUpsertParams, ChatUpsertResponse, Chats } from './resources/chats';
+import {
+  ChatUpsertBatchParams,
+  ChatUpsertBatchResponse,
+  ChatUpsertParams,
+  ChatUpsertResponse,
+  Chats,
+} from './resources/chats';
 import {
   EntrypointListParams,
   EntrypointListResponse,
@@ -806,6 +812,8 @@ export declare namespace SparkCRM {
   export {
     Chats as Chats,
     type ChatUpsertResponse as ChatUpsertResponse,
+    type ChatUpsertBatchResponse as ChatUpsertBatchResponse,
     type ChatUpsertParams as ChatUpsertParams,
+    type ChatUpsertBatchParams as ChatUpsertBatchParams,
   };
 }

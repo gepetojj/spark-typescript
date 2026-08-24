@@ -121,7 +121,7 @@ export namespace FormRetrieveResponse {
       export interface UnionMember3 {
         id: string;
 
-        question: UnionMember3.Question;
+        question: UnionMember3.UnionMember0 | UnionMember3.UnionMember1;
 
         questionKey: string;
 
@@ -131,20 +131,30 @@ export namespace FormRetrieveResponse {
       }
 
       export namespace UnionMember3 {
-        export interface Question {
+        export interface UnionMember0 {
           answerKind: 'single_choice' | 'multiple_choice';
 
-          options: Array<Question.Option>;
+          options: Array<UnionMember0.Option>;
 
           prompt: string;
         }
 
-        export namespace Question {
+        export namespace UnionMember0 {
           export interface Option {
             id: string;
 
             label: string;
           }
+        }
+
+        export interface UnionMember1 {
+          answerKind: 'text';
+
+          prompt: string;
+
+          maxLength?: number;
+
+          placeholder?: string;
         }
       }
     }

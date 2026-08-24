@@ -63,7 +63,9 @@ Methods:
 Types:
 
 - <code><a href="./src/resources/chats.ts">ChatUpsertResponse</a></code>
+- <code><a href="./src/resources/chats.ts">ChatUpsertBatchResponse</a></code>
 
 Methods:
 
 - <code title="post /v1/chats">client.chats.<a href="./src/resources/chats.ts">upsert</a>({ ...params }) -> ChatUpsertResponse</code>
+- <code title="post /v1/chats/batch">client.chats.<a href="./src/resources/chats.ts">upsertBatch</a>({ ...params }) -> ChatUpsertBatchResponse</code>
