@@ -18,6 +18,20 @@ import * as Uploads from './core/uploads';
 import * as API from './resources/index';
 import { APIPromise } from './core/api-promise';
 import {
+  CampaignCreateParams,
+  CampaignCreateResponse,
+  CampaignGetFilterSchemaResponse,
+  CampaignListResponse,
+  CampaignPreviewAudienceParams,
+  CampaignPreviewAudienceResponse,
+  CampaignRetrieveExecutionParams,
+  CampaignRetrieveExecutionResponse,
+  CampaignRetrieveResponse,
+  CampaignStartParams,
+  CampaignStartResponse,
+  Campaigns,
+} from './resources/campaigns';
+import {
   ChatUpsertBatchParams,
   ChatUpsertBatchResponse,
   ChatUpsertParams,
@@ -37,6 +51,11 @@ import {
   FormSubmitResponseResponse,
   Forms,
 } from './resources/forms';
+import {
+  MessageTemplateListResponse,
+  MessageTemplateRetrieveResponse,
+  MessageTemplates,
+} from './resources/message-templates';
 import {
   ChatsCreatedWebhook,
   ChatsCreatedWebhookPayload,
@@ -697,19 +716,11 @@ export class SparkCRM {
     return () => controller.abort();
   }
 
-  private buildBody({ options }: { options: FinalRequestOptions }): {
+  private buildBody({ options: { body, headers: rawHeaders } }: { options: FinalRequestOptions }): {
     bodyHeaders: HeadersLike;
     body: BodyInit | undefined;
   } {
-    const { body, headers: rawHeaders } = options;
     if (!body) {
-      // A resource method always passes a `body` key when its operation defines a
-      // request body, even if the caller omitted an optional body param. Keep the
-      // content-type for those, and only elide it for operations with no body at
-      // all (e.g. GET/DELETE).
-      if (body == null && 'body' in options) {
-        return this.#encoder({ body, headers: buildHeaders([rawHeaders]) });
-      }
       return { bodyHeaders: undefined, body: undefined };
     }
     const headers = buildHeaders([rawHeaders]);
@@ -774,6 +785,8 @@ export class SparkCRM {
   forms: API.Forms = new API.Forms(this);
   messaging: API.Messaging = new API.Messaging(this);
   chats: API.Chats = new API.Chats(this);
+  campaigns: API.Campaigns = new API.Campaigns(this);
+  messageTemplates: API.MessageTemplates = new API.MessageTemplates(this);
 }
 
 SparkCRM.Webhooks = Webhooks;
@@ -781,6 +794,8 @@ SparkCRM.Entrypoints = Entrypoints;
 SparkCRM.Forms = Forms;
 SparkCRM.Messaging = Messaging;
 SparkCRM.Chats = Chats;
+SparkCRM.Campaigns = Campaigns;
+SparkCRM.MessageTemplates = MessageTemplates;
 
 export declare namespace SparkCRM {
   export type RequestOptions = Opts.RequestOptions;
@@ -823,5 +838,26 @@ export declare namespace SparkCRM {
     type ChatUpsertBatchResponse as ChatUpsertBatchResponse,
     type ChatUpsertParams as ChatUpsertParams,
     type ChatUpsertBatchParams as ChatUpsertBatchParams,
+  };
+
+  export {
+    Campaigns as Campaigns,
+    type CampaignCreateResponse as CampaignCreateResponse,
+    type CampaignRetrieveResponse as CampaignRetrieveResponse,
+    type CampaignListResponse as CampaignListResponse,
+    type CampaignGetFilterSchemaResponse as CampaignGetFilterSchemaResponse,
+    type CampaignPreviewAudienceResponse as CampaignPreviewAudienceResponse,
+    type CampaignRetrieveExecutionResponse as CampaignRetrieveExecutionResponse,
+    type CampaignStartResponse as CampaignStartResponse,
+    type CampaignCreateParams as CampaignCreateParams,
+    type CampaignPreviewAudienceParams as CampaignPreviewAudienceParams,
+    type CampaignRetrieveExecutionParams as CampaignRetrieveExecutionParams,
+    type CampaignStartParams as CampaignStartParams,
+  };
+
+  export {
+    MessageTemplates as MessageTemplates,
+    type MessageTemplateRetrieveResponse as MessageTemplateRetrieveResponse,
+    type MessageTemplateListResponse as MessageTemplateListResponse,
   };
 }

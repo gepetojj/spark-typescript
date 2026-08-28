@@ -1,23 +1,5 @@
 # Changelog
 
-## [0.6.0](https://github.com/gepetojj/spark-typescript/compare/v0.5.2...v0.6.0) (2026-08-24)
-
-
-### Features
-
-* **gateway:** add batch chat upsert endpoint ([0878070](https://github.com/gepetojj/spark-typescript/commit/0878070da9d70946517ee3dc6e8b789f214008c9))
-* **gateway:** add batch chat upsert endpoint ([d61ad46](https://github.com/gepetojj/spark-typescript/commit/d61ad46cce8e97138aa099ea0e4cc077d27c93d0))
-
-
-### Bug Fixes
-
-* **sdk:** re-seal spark-typescript custom code after prettier fix ([df1754d](https://github.com/gepetojj/spark-typescript/commit/df1754d64aa165323c064a8dc1616184cb05f16d))
-
-
-### Chores
-
-* fix prettier formatting ([ba1f65f](https://github.com/gepetojj/spark-typescript/commit/ba1f65f4c05e0dfb4fc99af74eed92ca6fd24a54))
-
 ## [0.5.2](https://github.com/gepetojj/spark-typescript/compare/v0.5.1...v0.5.2) (2026-06-12)
 
 
