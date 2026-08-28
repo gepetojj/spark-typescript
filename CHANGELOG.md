@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.6.1](https://github.com/gepetojj/spark-typescript/compare/v0.6.0...v0.6.1) (2026-08-28)
+
+
+### Bug Fixes
+
+* resolve package.json merge conflict after stlc campaigns build ([b3c293a](https://github.com/gepetojj/spark-typescript/commit/b3c293ab51b17759d58602185d50c98839d89062))
+* **sdk:** re-seal spark-typescript custom code for campaigns API ([ea0041f](https://github.com/gepetojj/spark-typescript/commit/ea0041f122de6eca81172d9d20db1fb7da129959))
+
 ## [0.6.0](https://github.com/gepetojj/spark-typescript/compare/v0.5.2...v0.6.0) (2026-08-24)
 
 
