@@ -1,6 +1,20 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 export {
+  Campaigns,
+  type CampaignCreateResponse,
+  type CampaignRetrieveResponse,
+  type CampaignListResponse,
+  type CampaignGetFilterSchemaResponse,
+  type CampaignPreviewAudienceResponse,
+  type CampaignRetrieveExecutionResponse,
+  type CampaignStartResponse,
+  type CampaignCreateParams,
+  type CampaignPreviewAudienceParams,
+  type CampaignRetrieveExecutionParams,
+  type CampaignStartParams,
+} from './campaigns';
+export {
   Chats,
   type ChatUpsertResponse,
   type ChatUpsertBatchResponse,
@@ -20,6 +34,11 @@ export {
   type FormSubmitResponseResponse,
   type FormSubmitResponseParams,
 } from './forms';
+export {
+  MessageTemplates,
+  type MessageTemplateRetrieveResponse,
+  type MessageTemplateListResponse,
+} from './message-templates';
 export {
   Messaging,
   type MessagingUploadMediaResponse,

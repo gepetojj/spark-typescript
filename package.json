@@ -1,7 +1,12 @@
 {
   "name": "sparkcrm",
+<<<<<<< HEAD
   "version": "0.6.0",
+  "description": "The official TypeScript library for the Spark CRM API",
+=======
+  "version": "0.5.2",
   "description": "The official TypeScript library for the Spark CRM API.",
+>>>>>>> 360092e (Apply custom code)
   "author": "Spark CRM <suporte@crmspark.com.br>",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
