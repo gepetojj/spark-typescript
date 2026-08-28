@@ -160,6 +160,8 @@ export namespace ChatListMessagesResponse {
       type: 'image' | 'audio' | 'video' | 'document';
 
       url: string;
+
+      fileName?: string | null;
     }
   }
 }

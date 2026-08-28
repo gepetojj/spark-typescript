@@ -173,6 +173,8 @@ export namespace MessagesReceivedWebhook {
         type: 'image' | 'audio' | 'video' | 'document';
 
         url: string;
+
+        fileName?: string | null;
       }
     }
   }
@@ -308,6 +310,8 @@ export namespace MessagesReceivedWebhookPayload {
       type: 'image' | 'audio' | 'video' | 'document';
 
       url: string;
+
+      fileName?: string | null;
     }
   }
 }
@@ -457,6 +461,8 @@ export namespace MessagesSentWebhook {
         type: 'image' | 'audio' | 'video' | 'document';
 
         url: string;
+
+        fileName?: string | null;
       }
     }
   }
@@ -600,6 +606,8 @@ export namespace MessagesSentWebhookPayload {
       type: 'image' | 'audio' | 'video' | 'document';
 
       url: string;
+
+      fileName?: string | null;
     }
   }
 }

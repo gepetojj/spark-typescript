@@ -69,3 +69,38 @@ Methods:
 
 - <code title="post /v1/chats">client.chats.<a href="./src/resources/chats.ts">upsert</a>({ ...params }) -> ChatUpsertResponse</code>
 - <code title="post /v1/chats/batch">client.chats.<a href="./src/resources/chats.ts">upsertBatch</a>({ ...params }) -> ChatUpsertBatchResponse</code>
+
+# Campaigns
+
+Types:
+
+- <code><a href="./src/resources/campaigns.ts">CampaignCreateResponse</a></code>
+- <code><a href="./src/resources/campaigns.ts">CampaignRetrieveResponse</a></code>
+- <code><a href="./src/resources/campaigns.ts">CampaignListResponse</a></code>
+- <code><a href="./src/resources/campaigns.ts">CampaignGetFilterSchemaResponse</a></code>
+- <code><a href="./src/resources/campaigns.ts">CampaignPreviewAudienceResponse</a></code>
+- <code><a href="./src/resources/campaigns.ts">CampaignRetrieveExecutionResponse</a></code>
+- <code><a href="./src/resources/campaigns.ts">CampaignStartResponse</a></code>
+
+Methods:
+
+- <code title="post /v1/campaigns">client.campaigns.<a href="./src/resources/campaigns.ts">create</a>({ ...params }) -> CampaignCreateResponse</code>
+- <code title="get /v1/campaigns/{id}">client.campaigns.<a href="./src/resources/campaigns.ts">retrieve</a>(id) -> CampaignRetrieveResponse</code>
+- <code title="get /v1/campaigns">client.campaigns.<a href="./src/resources/campaigns.ts">list</a>() -> CampaignListResponse</code>
+- <code title="post /v1/campaigns/{id}/cancel">client.campaigns.<a href="./src/resources/campaigns.ts">cancel</a>(id) -> void</code>
+- <code title="get /v1/campaigns/filters/schema">client.campaigns.<a href="./src/resources/campaigns.ts">getFilterSchema</a>() -> CampaignGetFilterSchemaResponse</code>
+- <code title="post /v1/campaigns/audience-preview">client.campaigns.<a href="./src/resources/campaigns.ts">previewAudience</a>({ ...params }) -> CampaignPreviewAudienceResponse</code>
+- <code title="get /v1/campaigns/{id}/executions/{executionId}">client.campaigns.<a href="./src/resources/campaigns.ts">retrieveExecution</a>(executionID, { ...params }) -> CampaignRetrieveExecutionResponse</code>
+- <code title="post /v1/campaigns/{id}/start">client.campaigns.<a href="./src/resources/campaigns.ts">start</a>(id, { ...params }) -> CampaignStartResponse</code>
+
+# MessageTemplates
+
+Types:
+
+- <code><a href="./src/resources/message-templates.ts">MessageTemplateRetrieveResponse</a></code>
+- <code><a href="./src/resources/message-templates.ts">MessageTemplateListResponse</a></code>
+
+Methods:
+
+- <code title="get /v1/message-templates/{id}">client.messageTemplates.<a href="./src/resources/message-templates.ts">retrieve</a>(id) -> MessageTemplateRetrieveResponse</code>
+- <code title="get /v1/message-templates">client.messageTemplates.<a href="./src/resources/message-templates.ts">list</a>() -> MessageTemplateListResponse</code>
