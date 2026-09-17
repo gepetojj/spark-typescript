@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0](https://github.com/gepetojj/spark-typescript/compare/v0.6.1...v0.7.0) (2026-09-17)
+
+
+### Features
+
+* **gateway:** add mark as read and typing indicator endpoints ([703f2d0](https://github.com/gepetojj/spark-typescript/commit/703f2d0338b417e42ed6f0cde0770d1dd8f2b0ff))
+
 ## [0.6.1](https://github.com/gepetojj/spark-typescript/compare/v0.6.0...v0.6.1) (2026-08-28)
 
 
