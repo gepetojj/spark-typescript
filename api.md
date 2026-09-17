@@ -50,13 +50,20 @@ Methods:
 
 Types:
 
-- <code><a href="./src/resources/messaging/chats.ts">ChatListMessagesResponse</a></code>
+- <code><a href="./src/resources/messaging/chats/chats.ts">ChatListMessagesResponse</a></code>
 
 Methods:
 
-- <code title="get /v1/messaging/chats/{chatId}">client.messaging.chats.<a href="./src/resources/messaging/chats.ts">listMessages</a>(chatID, { ...params }) -> ChatListMessagesResponse</code>
-- <code title="post /v1/messaging/chats/{chatId}">client.messaging.chats.<a href="./src/resources/messaging/chats.ts">sendMessage</a>(chatID, { ...params }) -> void</code>
-- <code title="post /v1/messaging/chats/{chatId}/templates">client.messaging.chats.<a href="./src/resources/messaging/chats.ts">sendMessageTemplate</a>(chatID, { ...params }) -> void</code>
+- <code title="get /v1/messaging/chats/{chatId}">client.messaging.chats.<a href="./src/resources/messaging/chats/chats.ts">listMessages</a>(chatID, { ...params }) -> ChatListMessagesResponse</code>
+- <code title="post /v1/messaging/chats/{chatId}">client.messaging.chats.<a href="./src/resources/messaging/chats/chats.ts">sendMessage</a>(chatID, { ...params }) -> void</code>
+- <code title="post /v1/messaging/chats/{chatId}/templates">client.messaging.chats.<a href="./src/resources/messaging/chats/chats.ts">sendMessageTemplate</a>(chatID, { ...params }) -> void</code>
+
+### Messages
+
+Methods:
+
+- <code title="post /v1/messaging/chats/{chatId}/messages/{messageId}/read">client.messaging.chats.messages.<a href="./src/resources/messaging/chats/messages.ts">markAsRead</a>(messageID, { ...params }) -> void</code>
+- <code title="post /v1/messaging/chats/{chatId}/messages/{messageId}/read-and-type">client.messaging.chats.messages.<a href="./src/resources/messaging/chats/messages.ts">markAsReadAndType</a>(messageID, { ...params }) -> void</code>
 
 # Chats
 

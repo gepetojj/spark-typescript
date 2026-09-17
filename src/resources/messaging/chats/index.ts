@@ -6,5 +6,5 @@ export {
   type ChatListMessagesParams,
   type ChatSendMessageParams,
   type ChatSendMessageTemplateParams,
-} from './chats/index';
-export { Messaging, type MessagingUploadMediaResponse, type MessagingUploadMediaParams } from './messaging';
+} from './chats';
+export { Messages, type MessageMarkAsReadParams, type MessageMarkAsReadAndTypeParams } from './messages';
