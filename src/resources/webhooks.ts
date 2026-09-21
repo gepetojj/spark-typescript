@@ -612,7 +612,72 @@ export namespace MessagesSentWebhookPayload {
   }
 }
 
-export type SparkWebhookBody = MessagesReceivedWebhook | MessagesSentWebhook | ChatsCreatedWebhook;
+export type SparkWebhookBody =
+  | MessagesReceivedWebhook
+  | MessagesSentWebhook
+  | ChatsCreatedWebhook
+  | SparkWebhookBody.SparkWebhookBodyEntrypointsWhatsappConnected
+  | SparkWebhookBody.SparkWebhookBodyEntrypointsWhatsappConnectionFailed;
+
+export namespace SparkWebhookBody {
+  export interface SparkWebhookBodyEntrypointsWhatsappConnected {
+    data: SparkWebhookBodyEntrypointsWhatsappConnected.Data;
+
+    event: 'entrypoints.whatsapp.connected';
+  }
+
+  export namespace SparkWebhookBodyEntrypointsWhatsappConnected {
+    export interface Data {
+      entrypoint: Data.Entrypoint;
+
+      occurredAt: string;
+
+      sessionId: string;
+
+      tenantId: string;
+    }
+
+    export namespace Data {
+      export interface Entrypoint {
+        id: string;
+
+        displayPhone: string | null;
+
+        funnelId: string | null;
+
+        funnelStepId: string | null;
+
+        isCoexistence: boolean;
+
+        name: string | null;
+
+        phoneNumberId: string;
+
+        wabaId: string;
+      }
+    }
+  }
+
+  export interface SparkWebhookBodyEntrypointsWhatsappConnectionFailed {
+    data: SparkWebhookBodyEntrypointsWhatsappConnectionFailed.Data;
+
+    event: 'entrypoints.whatsapp.connection_failed';
+  }
+
+  export namespace SparkWebhookBodyEntrypointsWhatsappConnectionFailed {
+    export interface Data {
+      occurredAt: string;
+
+      reason: 'expired' | 'token_exchange_failed' | 'phone_in_use' | 'funnel_not_found';
+
+      sessionId: string;
+
+      status: 'failed' | 'expired';
+
+      tenantId: string;
+    }
+  }
+}
 
 export declare namespace Webhooks {
   export {
