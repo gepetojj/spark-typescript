@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.8.0](https://github.com/gepetojj/spark-typescript/compare/v0.7.0...v0.8.0) (2026-09-22)
+
+
+### Features
+
+* implementa endpoint para conexão remota de números da API oficial ([b889cd3](https://github.com/gepetojj/spark-typescript/commit/b889cd3e4da5047cf52ea90f5bc3dc73e97337d2))
+
+
+### Documentation
+
+* adiciona skill de deploy do SDK ([86a3264](https://github.com/gepetojj/spark-typescript/commit/86a32644cb13e01cb0a8a417b7bc01371360f048))
+
 ## [0.7.0](https://github.com/gepetojj/spark-typescript/compare/v0.6.1...v0.7.0) (2026-09-17)
 
 
