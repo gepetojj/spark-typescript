@@ -4,11 +4,27 @@ Types:
 
 - <code><a href="./src/resources/webhooks.ts">ChatsCreatedWebhook</a></code>
 - <code><a href="./src/resources/webhooks.ts">ChatsCreatedWebhookPayload</a></code>
+- <code><a href="./src/resources/webhooks.ts">EntrypointsWhatsappConnectedWebhook</a></code>
+- <code><a href="./src/resources/webhooks.ts">EntrypointsWhatsappConnectedWebhookPayload</a></code>
+- <code><a href="./src/resources/webhooks.ts">EntrypointsWhatsappConnectionFailedWebhook</a></code>
+- <code><a href="./src/resources/webhooks.ts">EntrypointsWhatsappConnectionFailedWebhookPayload</a></code>
 - <code><a href="./src/resources/webhooks.ts">MessagesReceivedWebhook</a></code>
 - <code><a href="./src/resources/webhooks.ts">MessagesReceivedWebhookPayload</a></code>
 - <code><a href="./src/resources/webhooks.ts">MessagesSentWebhook</a></code>
 - <code><a href="./src/resources/webhooks.ts">MessagesSentWebhookPayload</a></code>
 - <code><a href="./src/resources/webhooks.ts">SparkWebhookBody</a></code>
+
+# WhatsappConnectionSessions
+
+Types:
+
+- <code><a href="./src/resources/whatsapp-connection-sessions.ts">WhatsappConnectionSessionCreateResponse</a></code>
+- <code><a href="./src/resources/whatsapp-connection-sessions.ts">WhatsappConnectionSessionRetrieveResponse</a></code>
+
+Methods:
+
+- <code title="post /v1/entrypoints/whatsapp/connection-sessions">client.whatsappConnectionSessions.<a href="./src/resources/whatsapp-connection-sessions.ts">create</a>({ ...params }) -> WhatsappConnectionSessionCreateResponse</code>
+- <code title="get /v1/entrypoints/whatsapp/connection-sessions/{sessionId}">client.whatsappConnectionSessions.<a href="./src/resources/whatsapp-connection-sessions.ts">retrieve</a>(sessionID) -> WhatsappConnectionSessionRetrieveResponse</code>
 
 # Entrypoints
 
