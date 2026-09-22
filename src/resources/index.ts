@@ -48,9 +48,19 @@ export {
   Webhooks,
   type ChatsCreatedWebhook,
   type ChatsCreatedWebhookPayload,
+  type EntrypointsWhatsappConnectedWebhook,
+  type EntrypointsWhatsappConnectedWebhookPayload,
+  type EntrypointsWhatsappConnectionFailedWebhook,
+  type EntrypointsWhatsappConnectionFailedWebhookPayload,
   type MessagesReceivedWebhook,
   type MessagesReceivedWebhookPayload,
   type MessagesSentWebhook,
   type MessagesSentWebhookPayload,
   type SparkWebhookBody,
 } from './webhooks';
+export {
+  WhatsappConnectionSessions,
+  type WhatsappConnectionSessionCreateResponse,
+  type WhatsappConnectionSessionRetrieveResponse,
+  type WhatsappConnectionSessionCreateParams,
+} from './whatsapp-connection-sessions';
