@@ -59,6 +59,10 @@ import {
 import {
   ChatsCreatedWebhook,
   ChatsCreatedWebhookPayload,
+  EntrypointsWhatsappConnectedWebhook,
+  EntrypointsWhatsappConnectedWebhookPayload,
+  EntrypointsWhatsappConnectionFailedWebhook,
+  EntrypointsWhatsappConnectionFailedWebhookPayload,
   MessagesReceivedWebhook,
   MessagesReceivedWebhookPayload,
   MessagesSentWebhook,
@@ -66,6 +70,12 @@ import {
   SparkWebhookBody,
   Webhooks,
 } from './resources/webhooks';
+import {
+  WhatsappConnectionSessionCreateParams,
+  WhatsappConnectionSessionCreateResponse,
+  WhatsappConnectionSessionRetrieveResponse,
+  WhatsappConnectionSessions,
+} from './resources/whatsapp-connection-sessions';
 import {
   Messaging,
   MessagingUploadMediaParams,
@@ -781,6 +791,7 @@ export class SparkCRM {
   static toFile = Uploads.toFile;
 
   webhooks: API.Webhooks = new API.Webhooks(this);
+  whatsappConnectionSessions: API.WhatsappConnectionSessions = new API.WhatsappConnectionSessions(this);
   entrypoints: API.Entrypoints = new API.Entrypoints(this);
   forms: API.Forms = new API.Forms(this);
   messaging: API.Messaging = new API.Messaging(this);
@@ -790,6 +801,7 @@ export class SparkCRM {
 }
 
 SparkCRM.Webhooks = Webhooks;
+SparkCRM.WhatsappConnectionSessions = WhatsappConnectionSessions;
 SparkCRM.Entrypoints = Entrypoints;
 SparkCRM.Forms = Forms;
 SparkCRM.Messaging = Messaging;
@@ -804,11 +816,22 @@ export declare namespace SparkCRM {
     Webhooks as Webhooks,
     type ChatsCreatedWebhook as ChatsCreatedWebhook,
     type ChatsCreatedWebhookPayload as ChatsCreatedWebhookPayload,
+    type EntrypointsWhatsappConnectedWebhook as EntrypointsWhatsappConnectedWebhook,
+    type EntrypointsWhatsappConnectedWebhookPayload as EntrypointsWhatsappConnectedWebhookPayload,
+    type EntrypointsWhatsappConnectionFailedWebhook as EntrypointsWhatsappConnectionFailedWebhook,
+    type EntrypointsWhatsappConnectionFailedWebhookPayload as EntrypointsWhatsappConnectionFailedWebhookPayload,
     type MessagesReceivedWebhook as MessagesReceivedWebhook,
     type MessagesReceivedWebhookPayload as MessagesReceivedWebhookPayload,
     type MessagesSentWebhook as MessagesSentWebhook,
     type MessagesSentWebhookPayload as MessagesSentWebhookPayload,
     type SparkWebhookBody as SparkWebhookBody,
+  };
+
+  export {
+    WhatsappConnectionSessions as WhatsappConnectionSessions,
+    type WhatsappConnectionSessionCreateResponse as WhatsappConnectionSessionCreateResponse,
+    type WhatsappConnectionSessionRetrieveResponse as WhatsappConnectionSessionRetrieveResponse,
+    type WhatsappConnectionSessionCreateParams as WhatsappConnectionSessionCreateParams,
   };
 
   export {

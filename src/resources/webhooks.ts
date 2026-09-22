@@ -36,6 +36,106 @@ export interface ChatsCreatedWebhookPayload {
   entrypointId?: string;
 }
 
+export interface EntrypointsWhatsappConnectedWebhook {
+  data: EntrypointsWhatsappConnectedWebhook.Data;
+
+  event: 'entrypoints.whatsapp.connected';
+}
+
+export namespace EntrypointsWhatsappConnectedWebhook {
+  export interface Data {
+    entrypoint: Data.Entrypoint;
+
+    occurredAt: string;
+
+    sessionId: string;
+
+    tenantId: string;
+  }
+
+  export namespace Data {
+    export interface Entrypoint {
+      id: string;
+
+      displayPhone: string | null;
+
+      funnelId: string | null;
+
+      funnelStepId: string | null;
+
+      isCoexistence: boolean;
+
+      name: string | null;
+
+      phoneNumberId: string;
+
+      wabaId: string;
+    }
+  }
+}
+
+export interface EntrypointsWhatsappConnectedWebhookPayload {
+  entrypoint: EntrypointsWhatsappConnectedWebhookPayload.Entrypoint;
+
+  occurredAt: string;
+
+  sessionId: string;
+
+  tenantId: string;
+}
+
+export namespace EntrypointsWhatsappConnectedWebhookPayload {
+  export interface Entrypoint {
+    id: string;
+
+    displayPhone: string | null;
+
+    funnelId: string | null;
+
+    funnelStepId: string | null;
+
+    isCoexistence: boolean;
+
+    name: string | null;
+
+    phoneNumberId: string;
+
+    wabaId: string;
+  }
+}
+
+export interface EntrypointsWhatsappConnectionFailedWebhook {
+  data: EntrypointsWhatsappConnectionFailedWebhook.Data;
+
+  event: 'entrypoints.whatsapp.connection_failed';
+}
+
+export namespace EntrypointsWhatsappConnectionFailedWebhook {
+  export interface Data {
+    occurredAt: string;
+
+    reason: 'expired' | 'token_exchange_failed' | 'phone_in_use' | 'funnel_not_found';
+
+    sessionId: string;
+
+    status: 'failed' | 'expired';
+
+    tenantId: string;
+  }
+}
+
+export interface EntrypointsWhatsappConnectionFailedWebhookPayload {
+  occurredAt: string;
+
+  reason: 'expired' | 'token_exchange_failed' | 'phone_in_use' | 'funnel_not_found';
+
+  sessionId: string;
+
+  status: 'failed' | 'expired';
+
+  tenantId: string;
+}
+
 export interface MessagesReceivedWebhook {
   data: MessagesReceivedWebhook.Data;
 
@@ -612,12 +712,21 @@ export namespace MessagesSentWebhookPayload {
   }
 }
 
-export type SparkWebhookBody = MessagesReceivedWebhook | MessagesSentWebhook | ChatsCreatedWebhook;
+export type SparkWebhookBody =
+  | MessagesReceivedWebhook
+  | MessagesSentWebhook
+  | ChatsCreatedWebhook
+  | EntrypointsWhatsappConnectedWebhook
+  | EntrypointsWhatsappConnectionFailedWebhook;
 
 export declare namespace Webhooks {
   export {
     type ChatsCreatedWebhook as ChatsCreatedWebhook,
     type ChatsCreatedWebhookPayload as ChatsCreatedWebhookPayload,
+    type EntrypointsWhatsappConnectedWebhook as EntrypointsWhatsappConnectedWebhook,
+    type EntrypointsWhatsappConnectedWebhookPayload as EntrypointsWhatsappConnectedWebhookPayload,
+    type EntrypointsWhatsappConnectionFailedWebhook as EntrypointsWhatsappConnectionFailedWebhook,
+    type EntrypointsWhatsappConnectionFailedWebhookPayload as EntrypointsWhatsappConnectionFailedWebhookPayload,
     type MessagesReceivedWebhook as MessagesReceivedWebhook,
     type MessagesReceivedWebhookPayload as MessagesReceivedWebhookPayload,
     type MessagesSentWebhook as MessagesSentWebhook,
