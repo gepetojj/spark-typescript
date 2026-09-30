@@ -120,10 +120,15 @@ Methods:
 
 Types:
 
+- <code><a href="./src/resources/message-templates.ts">MessageTemplateCreateResponse</a></code>
 - <code><a href="./src/resources/message-templates.ts">MessageTemplateRetrieveResponse</a></code>
+- <code><a href="./src/resources/message-templates.ts">MessageTemplateUpdateResponse</a></code>
 - <code><a href="./src/resources/message-templates.ts">MessageTemplateListResponse</a></code>
 
 Methods:
 
+- <code title="post /v1/message-templates">client.messageTemplates.<a href="./src/resources/message-templates.ts">create</a>({ ...params }) -> MessageTemplateCreateResponse</code>
 - <code title="get /v1/message-templates/{id}">client.messageTemplates.<a href="./src/resources/message-templates.ts">retrieve</a>(id) -> MessageTemplateRetrieveResponse</code>
+- <code title="patch /v1/message-templates/{id}">client.messageTemplates.<a href="./src/resources/message-templates.ts">update</a>(id, { ...params }) -> MessageTemplateUpdateResponse</code>
 - <code title="get /v1/message-templates">client.messageTemplates.<a href="./src/resources/message-templates.ts">list</a>() -> MessageTemplateListResponse</code>
+- <code title="delete /v1/message-templates/{id}">client.messageTemplates.<a href="./src/resources/message-templates.ts">delete</a>(id) -> void</code>

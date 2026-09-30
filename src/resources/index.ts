@@ -36,8 +36,12 @@ export {
 } from './forms';
 export {
   MessageTemplates,
+  type MessageTemplateCreateResponse,
   type MessageTemplateRetrieveResponse,
+  type MessageTemplateUpdateResponse,
   type MessageTemplateListResponse,
+  type MessageTemplateCreateParams,
+  type MessageTemplateUpdateParams,
 } from './message-templates';
 export {
   Messaging,
