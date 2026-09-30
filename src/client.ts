@@ -52,8 +52,12 @@ import {
   Forms,
 } from './resources/forms';
 import {
+  MessageTemplateCreateParams,
+  MessageTemplateCreateResponse,
   MessageTemplateListResponse,
   MessageTemplateRetrieveResponse,
+  MessageTemplateUpdateParams,
+  MessageTemplateUpdateResponse,
   MessageTemplates,
 } from './resources/message-templates';
 import {
@@ -888,7 +892,11 @@ export declare namespace SparkCRM {
 
   export {
     MessageTemplates as MessageTemplates,
+    type MessageTemplateCreateResponse as MessageTemplateCreateResponse,
     type MessageTemplateRetrieveResponse as MessageTemplateRetrieveResponse,
+    type MessageTemplateUpdateResponse as MessageTemplateUpdateResponse,
     type MessageTemplateListResponse as MessageTemplateListResponse,
+    type MessageTemplateCreateParams as MessageTemplateCreateParams,
+    type MessageTemplateUpdateParams as MessageTemplateUpdateParams,
   };
 }
