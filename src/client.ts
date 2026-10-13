@@ -52,8 +52,12 @@ import {
   Forms,
 } from './resources/forms';
 import {
+  MessageTemplateCreateParams,
+  MessageTemplateCreateResponse,
   MessageTemplateListResponse,
   MessageTemplateRetrieveResponse,
+  MessageTemplateUpdateParams,
+  MessageTemplateUpdateResponse,
   MessageTemplates,
 } from './resources/message-templates';
 import {
@@ -63,6 +67,16 @@ import {
   EntrypointsWhatsappConnectedWebhookPayload,
   EntrypointsWhatsappConnectionFailedWebhook,
   EntrypointsWhatsappConnectionFailedWebhookPayload,
+  MessageTemplatesCategoryUpdatedWebhook,
+  MessageTemplatesCategoryUpdatedWebhookPayload,
+  MessageTemplatesCreatedWebhook,
+  MessageTemplatesCreatedWebhookPayload,
+  MessageTemplatesDeletedWebhook,
+  MessageTemplatesDeletedWebhookPayload,
+  MessageTemplatesStatusUpdatedWebhook,
+  MessageTemplatesStatusUpdatedWebhookPayload,
+  MessageTemplatesUpdatedWebhook,
+  MessageTemplatesUpdatedWebhookPayload,
   MessagesReceivedWebhook,
   MessagesReceivedWebhookPayload,
   MessagesSentWebhook,
@@ -726,11 +740,19 @@ export class SparkCRM {
     return () => controller.abort();
   }
 
-  private buildBody({ options: { body, headers: rawHeaders } }: { options: FinalRequestOptions }): {
+  private buildBody({ options }: { options: FinalRequestOptions }): {
     bodyHeaders: HeadersLike;
     body: BodyInit | undefined;
   } {
+    const { body, headers: rawHeaders } = options;
     if (!body) {
+      // A resource method always passes a `body` key when its operation defines a
+      // request body, even if the caller omitted an optional body param. Keep the
+      // content-type for those, and only elide it for operations with no body at
+      // all (e.g. GET/DELETE).
+      if (body == null && 'body' in options) {
+        return this.#encoder({ body, headers: buildHeaders([rawHeaders]) });
+      }
       return { bodyHeaders: undefined, body: undefined };
     }
     const headers = buildHeaders([rawHeaders]);
@@ -820,6 +842,16 @@ export declare namespace SparkCRM {
     type EntrypointsWhatsappConnectedWebhookPayload as EntrypointsWhatsappConnectedWebhookPayload,
     type EntrypointsWhatsappConnectionFailedWebhook as EntrypointsWhatsappConnectionFailedWebhook,
     type EntrypointsWhatsappConnectionFailedWebhookPayload as EntrypointsWhatsappConnectionFailedWebhookPayload,
+    type MessageTemplatesCategoryUpdatedWebhook as MessageTemplatesCategoryUpdatedWebhook,
+    type MessageTemplatesCategoryUpdatedWebhookPayload as MessageTemplatesCategoryUpdatedWebhookPayload,
+    type MessageTemplatesCreatedWebhook as MessageTemplatesCreatedWebhook,
+    type MessageTemplatesCreatedWebhookPayload as MessageTemplatesCreatedWebhookPayload,
+    type MessageTemplatesDeletedWebhook as MessageTemplatesDeletedWebhook,
+    type MessageTemplatesDeletedWebhookPayload as MessageTemplatesDeletedWebhookPayload,
+    type MessageTemplatesStatusUpdatedWebhook as MessageTemplatesStatusUpdatedWebhook,
+    type MessageTemplatesStatusUpdatedWebhookPayload as MessageTemplatesStatusUpdatedWebhookPayload,
+    type MessageTemplatesUpdatedWebhook as MessageTemplatesUpdatedWebhook,
+    type MessageTemplatesUpdatedWebhookPayload as MessageTemplatesUpdatedWebhookPayload,
     type MessagesReceivedWebhook as MessagesReceivedWebhook,
     type MessagesReceivedWebhookPayload as MessagesReceivedWebhookPayload,
     type MessagesSentWebhook as MessagesSentWebhook,
@@ -880,7 +912,11 @@ export declare namespace SparkCRM {
 
   export {
     MessageTemplates as MessageTemplates,
+    type MessageTemplateCreateResponse as MessageTemplateCreateResponse,
     type MessageTemplateRetrieveResponse as MessageTemplateRetrieveResponse,
+    type MessageTemplateUpdateResponse as MessageTemplateUpdateResponse,
     type MessageTemplateListResponse as MessageTemplateListResponse,
+    type MessageTemplateCreateParams as MessageTemplateCreateParams,
+    type MessageTemplateUpdateParams as MessageTemplateUpdateParams,
   };
 }

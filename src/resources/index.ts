@@ -36,8 +36,12 @@ export {
 } from './forms';
 export {
   MessageTemplates,
+  type MessageTemplateCreateResponse,
   type MessageTemplateRetrieveResponse,
+  type MessageTemplateUpdateResponse,
   type MessageTemplateListResponse,
+  type MessageTemplateCreateParams,
+  type MessageTemplateUpdateParams,
 } from './message-templates';
 export {
   Messaging,
@@ -52,6 +56,16 @@ export {
   type EntrypointsWhatsappConnectedWebhookPayload,
   type EntrypointsWhatsappConnectionFailedWebhook,
   type EntrypointsWhatsappConnectionFailedWebhookPayload,
+  type MessageTemplatesCategoryUpdatedWebhook,
+  type MessageTemplatesCategoryUpdatedWebhookPayload,
+  type MessageTemplatesCreatedWebhook,
+  type MessageTemplatesCreatedWebhookPayload,
+  type MessageTemplatesDeletedWebhook,
+  type MessageTemplatesDeletedWebhookPayload,
+  type MessageTemplatesStatusUpdatedWebhook,
+  type MessageTemplatesStatusUpdatedWebhookPayload,
+  type MessageTemplatesUpdatedWebhook,
+  type MessageTemplatesUpdatedWebhookPayload,
   type MessagesReceivedWebhook,
   type MessagesReceivedWebhookPayload,
   type MessagesSentWebhook,

@@ -8,6 +8,16 @@ Types:
 - <code><a href="./src/resources/webhooks.ts">EntrypointsWhatsappConnectedWebhookPayload</a></code>
 - <code><a href="./src/resources/webhooks.ts">EntrypointsWhatsappConnectionFailedWebhook</a></code>
 - <code><a href="./src/resources/webhooks.ts">EntrypointsWhatsappConnectionFailedWebhookPayload</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessageTemplatesCategoryUpdatedWebhook</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessageTemplatesCategoryUpdatedWebhookPayload</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessageTemplatesCreatedWebhook</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessageTemplatesCreatedWebhookPayload</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessageTemplatesDeletedWebhook</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessageTemplatesDeletedWebhookPayload</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessageTemplatesStatusUpdatedWebhook</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessageTemplatesStatusUpdatedWebhookPayload</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessageTemplatesUpdatedWebhook</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessageTemplatesUpdatedWebhookPayload</a></code>
 - <code><a href="./src/resources/webhooks.ts">MessagesReceivedWebhook</a></code>
 - <code><a href="./src/resources/webhooks.ts">MessagesReceivedWebhookPayload</a></code>
 - <code><a href="./src/resources/webhooks.ts">MessagesSentWebhook</a></code>
@@ -120,10 +130,15 @@ Methods:
 
 Types:
 
+- <code><a href="./src/resources/message-templates.ts">MessageTemplateCreateResponse</a></code>
 - <code><a href="./src/resources/message-templates.ts">MessageTemplateRetrieveResponse</a></code>
+- <code><a href="./src/resources/message-templates.ts">MessageTemplateUpdateResponse</a></code>
 - <code><a href="./src/resources/message-templates.ts">MessageTemplateListResponse</a></code>
 
 Methods:
 
+- <code title="post /v1/message-templates">client.messageTemplates.<a href="./src/resources/message-templates.ts">create</a>({ ...params }) -> MessageTemplateCreateResponse</code>
 - <code title="get /v1/message-templates/{id}">client.messageTemplates.<a href="./src/resources/message-templates.ts">retrieve</a>(id) -> MessageTemplateRetrieveResponse</code>
+- <code title="patch /v1/message-templates/{id}">client.messageTemplates.<a href="./src/resources/message-templates.ts">update</a>(id, { ...params }) -> MessageTemplateUpdateResponse</code>
 - <code title="get /v1/message-templates">client.messageTemplates.<a href="./src/resources/message-templates.ts">list</a>() -> MessageTemplateListResponse</code>
+- <code title="delete /v1/message-templates/{id}">client.messageTemplates.<a href="./src/resources/message-templates.ts">delete</a>(id) -> void</code>
