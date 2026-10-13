@@ -8,6 +8,16 @@ Types:
 - <code><a href="./src/resources/webhooks.ts">EntrypointsWhatsappConnectedWebhookPayload</a></code>
 - <code><a href="./src/resources/webhooks.ts">EntrypointsWhatsappConnectionFailedWebhook</a></code>
 - <code><a href="./src/resources/webhooks.ts">EntrypointsWhatsappConnectionFailedWebhookPayload</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessageTemplatesCategoryUpdatedWebhook</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessageTemplatesCategoryUpdatedWebhookPayload</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessageTemplatesCreatedWebhook</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessageTemplatesCreatedWebhookPayload</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessageTemplatesDeletedWebhook</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessageTemplatesDeletedWebhookPayload</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessageTemplatesStatusUpdatedWebhook</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessageTemplatesStatusUpdatedWebhookPayload</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessageTemplatesUpdatedWebhook</a></code>
+- <code><a href="./src/resources/webhooks.ts">MessageTemplatesUpdatedWebhookPayload</a></code>
 - <code><a href="./src/resources/webhooks.ts">MessagesReceivedWebhook</a></code>
 - <code><a href="./src/resources/webhooks.ts">MessagesReceivedWebhookPayload</a></code>
 - <code><a href="./src/resources/webhooks.ts">MessagesSentWebhook</a></code>
