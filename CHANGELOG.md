@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.0](https://github.com/gepetojj/spark-typescript/compare/v0.8.0...v0.9.0) (2026-09-30)
+
+
+### Features
+
+* implementa endpoints para CRUD de templates de mensagem no gateway ([4b5e1ae](https://github.com/gepetojj/spark-typescript/commit/4b5e1ae169630cedda7d1aa847301b59244a8a58))
+
 ## [0.8.0](https://github.com/gepetojj/spark-typescript/compare/v0.7.0...v0.8.0) (2026-09-22)
 
 
