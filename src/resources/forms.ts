@@ -121,7 +121,7 @@ export namespace FormRetrieveResponse {
       export interface UnionMember3 {
         id: string;
 
-        question: UnionMember3.UnionMember0 | UnionMember3.UnionMember1;
+        question: UnionMember3.UnionMember0 | UnionMember3.UnionMember1 | UnionMember3.UnionMember2;
 
         questionKey: string;
 
@@ -152,9 +152,25 @@ export namespace FormRetrieveResponse {
 
           prompt: string;
 
+          required: boolean;
+
+          variant: 'short' | 'long';
+
           maxLength?: number;
 
           placeholder?: string;
+        }
+
+        export interface UnionMember2 {
+          answerKind: 'schedule';
+
+          mode: 'slot' | 'day';
+
+          prompt: string;
+
+          required: true;
+
+          durationMinutes?: number;
         }
       }
     }
@@ -169,6 +185,8 @@ export interface FormSubmitResponseResponse {
   outcomes: Array<FormSubmitResponseResponse.Outcome>;
 
   submissionId: string;
+
+  booking?: FormSubmitResponseResponse.UnionMember0 | FormSubmitResponseResponse.Status;
 }
 
 export namespace FormSubmitResponseResponse {
@@ -178,6 +196,22 @@ export namespace FormSubmitResponseResponse {
     leadId: string;
 
     platform: 'whatsapp' | 'whatsapp_lite';
+  }
+
+  export interface UnionMember0 {
+    end: string;
+
+    isAllDay: boolean;
+
+    start: string;
+
+    status: 'reserved';
+
+    timezone: string;
+  }
+
+  export interface Status {
+    status: 'unavailable';
   }
 }
 
@@ -193,7 +227,21 @@ export namespace FormSubmitResponseParams {
   export interface Answer {
     questionKey: string;
 
-    value: string | Array<string>;
+    value: string | Array<string> | Answer.UnionMember2 | Answer.UnionMember3;
+  }
+
+  export namespace Answer {
+    export interface UnionMember2 {
+      mode: 'slot';
+
+      start: string;
+    }
+
+    export interface UnionMember3 {
+      date: string;
+
+      mode: 'day';
+    }
   }
 }
 
