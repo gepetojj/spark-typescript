@@ -11,12 +11,12 @@ describe('resource messageTemplates', () => {
   // Mock server tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.messageTemplates.create({
-      body: 'body',
+      body: 'x',
       category: 'MARKETING',
       isOfficial: true,
-      language: 'language',
+      language: 'xx',
       metaTemplateName: 'sq9_0_l1__5l',
-      name: 'name',
+      name: 'x',
       whatsappEntrypointId: 'whatsappEntrypointId',
     });
     const rawResponse = await responsePromise.asResponse();
@@ -31,31 +31,31 @@ describe('resource messageTemplates', () => {
   // Mock server tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.messageTemplates.create({
-      body: 'body',
+      body: 'x',
       category: 'MARKETING',
       isOfficial: true,
-      language: 'language',
+      language: 'xx',
       metaTemplateName: 'sq9_0_l1__5l',
-      name: 'name',
+      name: 'x',
       whatsappEntrypointId: 'whatsappEntrypointId',
       buttons: [
         {
-          text: 'text',
+          text: 'x',
           type: 'QUICK_REPLY',
           phone_number: 'phone_number',
           url: 'url',
         },
       ],
       description: 'description',
-      footer: 'footer',
-      header: { format: 'TEXT', text: 'text' },
+      footer: 'x',
+      header: { format: 'TEXT', text: 'x' },
       variables: [
         {
-          example: 'example',
+          example: 'x',
           index: 1,
           kind: 'common',
-          title: 'title',
-          source: 'source',
+          title: 'x',
+          source: 'chat.name',
         },
       ],
     });

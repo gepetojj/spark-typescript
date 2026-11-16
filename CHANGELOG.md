@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.0](https://github.com/gepetojj/spark-typescript/compare/v0.9.0...v0.10.0) (2026-10-13)
+
+
+### Features
+
+* **gateway-sdk:** webhook entrypoints.whatsapp.history_synced, origem business_app e motivo phone_not_found ([30f3037](https://github.com/gepetojj/spark-typescript/commit/30f3037d0343b2f8e266be68f898b27a97943944))
+
 ## [0.9.0](https://github.com/gepetojj/spark-typescript/compare/v0.8.0...v0.9.0) (2026-09-30)
 
 

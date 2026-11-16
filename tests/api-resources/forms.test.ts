@@ -49,6 +49,14 @@ describe('resource forms', () => {
     const response = await client.forms.submitResponse('id', {
       name: 'x',
       phone: 'xxx',
+      acquisition: {
+        ref: 'ref',
+        utmCampaign: 'utmCampaign',
+        utmContent: 'utmContent',
+        utmMedium: 'utmMedium',
+        utmSource: 'utmSource',
+        utmTerm: 'utmTerm',
+      },
       answers: [{ questionKey: 'x', value: 'string' }],
     });
   });
