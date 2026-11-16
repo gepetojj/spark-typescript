@@ -32,6 +32,14 @@ import {
   Campaigns,
 } from './resources/campaigns';
 import {
+  ChargeCancelResponse,
+  ChargeCreateParams,
+  ChargeCreateResponse,
+  ChargeListResponse,
+  ChargeRetrieveResponse,
+  Charges,
+} from './resources/charges';
+import {
   ChatUpsertBatchParams,
   ChatUpsertBatchResponse,
   ChatUpsertParams,
@@ -61,6 +69,18 @@ import {
   MessageTemplates,
 } from './resources/message-templates';
 import {
+  SaleCreateParams,
+  SaleCreateResponse,
+  SaleListParams,
+  SaleListResponse,
+  SaleRetrieveResponse,
+  Sales,
+} from './resources/sales';
+import {
+  ChargeWebhookPayload,
+  ChargesCreatedWebhook,
+  ChargesPaidWebhook,
+  ChargesRefundedWebhook,
   ChatsCreatedWebhook,
   ChatsCreatedWebhookPayload,
   EntrypointsWhatsappConnectedWebhook,
@@ -81,6 +101,10 @@ import {
   MessagesReceivedWebhookPayload,
   MessagesSentWebhook,
   MessagesSentWebhookPayload,
+  SaleWebhookPayload,
+  SalesCancelledWebhook,
+  SalesConfirmedWebhook,
+  SalesReversedWebhook,
   SparkWebhookBody,
   Webhooks,
 } from './resources/webhooks';
@@ -820,6 +844,8 @@ export class SparkCRM {
   chats: API.Chats = new API.Chats(this);
   campaigns: API.Campaigns = new API.Campaigns(this);
   messageTemplates: API.MessageTemplates = new API.MessageTemplates(this);
+  charges: API.Charges = new API.Charges(this);
+  sales: API.Sales = new API.Sales(this);
 }
 
 SparkCRM.Webhooks = Webhooks;
@@ -830,12 +856,18 @@ SparkCRM.Messaging = Messaging;
 SparkCRM.Chats = Chats;
 SparkCRM.Campaigns = Campaigns;
 SparkCRM.MessageTemplates = MessageTemplates;
+SparkCRM.Charges = Charges;
+SparkCRM.Sales = Sales;
 
 export declare namespace SparkCRM {
   export type RequestOptions = Opts.RequestOptions;
 
   export {
     Webhooks as Webhooks,
+    type ChargeWebhookPayload as ChargeWebhookPayload,
+    type ChargesCreatedWebhook as ChargesCreatedWebhook,
+    type ChargesPaidWebhook as ChargesPaidWebhook,
+    type ChargesRefundedWebhook as ChargesRefundedWebhook,
     type ChatsCreatedWebhook as ChatsCreatedWebhook,
     type ChatsCreatedWebhookPayload as ChatsCreatedWebhookPayload,
     type EntrypointsWhatsappConnectedWebhook as EntrypointsWhatsappConnectedWebhook,
@@ -856,6 +888,10 @@ export declare namespace SparkCRM {
     type MessagesReceivedWebhookPayload as MessagesReceivedWebhookPayload,
     type MessagesSentWebhook as MessagesSentWebhook,
     type MessagesSentWebhookPayload as MessagesSentWebhookPayload,
+    type SaleWebhookPayload as SaleWebhookPayload,
+    type SalesCancelledWebhook as SalesCancelledWebhook,
+    type SalesConfirmedWebhook as SalesConfirmedWebhook,
+    type SalesReversedWebhook as SalesReversedWebhook,
     type SparkWebhookBody as SparkWebhookBody,
   };
 
@@ -918,5 +954,23 @@ export declare namespace SparkCRM {
     type MessageTemplateListResponse as MessageTemplateListResponse,
     type MessageTemplateCreateParams as MessageTemplateCreateParams,
     type MessageTemplateUpdateParams as MessageTemplateUpdateParams,
+  };
+
+  export {
+    Charges as Charges,
+    type ChargeCreateResponse as ChargeCreateResponse,
+    type ChargeRetrieveResponse as ChargeRetrieveResponse,
+    type ChargeListResponse as ChargeListResponse,
+    type ChargeCancelResponse as ChargeCancelResponse,
+    type ChargeCreateParams as ChargeCreateParams,
+  };
+
+  export {
+    Sales as Sales,
+    type SaleCreateResponse as SaleCreateResponse,
+    type SaleRetrieveResponse as SaleRetrieveResponse,
+    type SaleListResponse as SaleListResponse,
+    type SaleCreateParams as SaleCreateParams,
+    type SaleListParams as SaleListParams,
   };
 }

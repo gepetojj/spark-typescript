@@ -4,6 +4,166 @@ import { APIResource } from '../core/resource';
 
 export class Webhooks extends APIResource {}
 
+export interface ChargeWebhookPayload {
+  id: string;
+
+  amount: number;
+
+  chatId: string;
+
+  createdAt: string;
+
+  description: string;
+
+  dueDate: string;
+
+  externalId: string | null;
+
+  invoiceUrl: string;
+
+  occurredAt: string;
+
+  paidAmount: number | null;
+
+  paidAt: string | null;
+
+  pixPayload: string;
+
+  refundedAmount: number | null;
+
+  saleId: string | null;
+
+  status: 'pending' | 'paid' | 'overdue' | 'cancelled' | 'refunded' | 'partially_refunded';
+
+  tenantId: string;
+}
+
+export interface ChargesCreatedWebhook {
+  data: ChargesCreatedWebhook.Data;
+
+  event: 'charges.created';
+}
+
+export namespace ChargesCreatedWebhook {
+  export interface Data {
+    id: string;
+
+    amount: number;
+
+    chatId: string;
+
+    createdAt: string;
+
+    description: string;
+
+    dueDate: string;
+
+    externalId: string | null;
+
+    invoiceUrl: string;
+
+    occurredAt: string;
+
+    paidAmount: number | null;
+
+    paidAt: string | null;
+
+    pixPayload: string;
+
+    refundedAmount: number | null;
+
+    saleId: string | null;
+
+    status: 'pending' | 'paid' | 'overdue' | 'cancelled' | 'refunded' | 'partially_refunded';
+
+    tenantId: string;
+  }
+}
+
+export interface ChargesPaidWebhook {
+  data: ChargesPaidWebhook.Data;
+
+  event: 'charges.paid';
+}
+
+export namespace ChargesPaidWebhook {
+  export interface Data {
+    id: string;
+
+    amount: number;
+
+    chatId: string;
+
+    createdAt: string;
+
+    description: string;
+
+    dueDate: string;
+
+    externalId: string | null;
+
+    invoiceUrl: string;
+
+    occurredAt: string;
+
+    paidAmount: number | null;
+
+    paidAt: string | null;
+
+    pixPayload: string;
+
+    refundedAmount: number | null;
+
+    saleId: string | null;
+
+    status: 'pending' | 'paid' | 'overdue' | 'cancelled' | 'refunded' | 'partially_refunded';
+
+    tenantId: string;
+  }
+}
+
+export interface ChargesRefundedWebhook {
+  data: ChargesRefundedWebhook.Data;
+
+  event: 'charges.refunded';
+}
+
+export namespace ChargesRefundedWebhook {
+  export interface Data {
+    id: string;
+
+    amount: number;
+
+    chatId: string;
+
+    createdAt: string;
+
+    description: string;
+
+    dueDate: string;
+
+    externalId: string | null;
+
+    invoiceUrl: string;
+
+    occurredAt: string;
+
+    paidAmount: number | null;
+
+    paidAt: string | null;
+
+    pixPayload: string;
+
+    refundedAmount: number | null;
+
+    saleId: string | null;
+
+    status: 'pending' | 'paid' | 'overdue' | 'cancelled' | 'refunded' | 'partially_refunded';
+
+    tenantId: string;
+  }
+}
+
 export interface ChatsCreatedWebhook {
   data: ChatsCreatedWebhook.Data;
 
@@ -16,11 +176,49 @@ export namespace ChatsCreatedWebhook {
 
     occurredAt: string;
 
-    platform: 'whatsapp' | 'whatsapp_lite' | 'instagram' | 'telegram';
+    platform: 'whatsapp' | 'whatsapp_lite' | 'instagram' | 'telegram' | 'lead_form';
 
     tenantId: string;
 
+    acquisition?: Data.Acquisition;
+
     entrypointId?: string;
+  }
+
+  export namespace Data {
+    export interface Acquisition {
+      source: 'meta_lead_ads' | 'spark_lead_form' | 'manual' | 'unknown';
+
+      capturedAt?: string;
+
+      commercialChannel?: 'paid_media' | 'organic' | 'other';
+
+      meta?: Acquisition.Meta;
+
+      originDetail?: string;
+
+      provider?: 'meta';
+    }
+
+    export namespace Acquisition {
+      export interface Meta {
+        adId?: string;
+
+        adsetId?: string;
+
+        campaignId?: string;
+
+        formId?: string;
+
+        formName?: string;
+
+        leadgenId?: string;
+
+        pageId?: string;
+
+        pageName?: string;
+      }
+    }
   }
 }
 
@@ -29,11 +227,49 @@ export interface ChatsCreatedWebhookPayload {
 
   occurredAt: string;
 
-  platform: 'whatsapp' | 'whatsapp_lite' | 'instagram' | 'telegram';
+  platform: 'whatsapp' | 'whatsapp_lite' | 'instagram' | 'telegram' | 'lead_form';
 
   tenantId: string;
 
+  acquisition?: ChatsCreatedWebhookPayload.Acquisition;
+
   entrypointId?: string;
+}
+
+export namespace ChatsCreatedWebhookPayload {
+  export interface Acquisition {
+    source: 'meta_lead_ads' | 'spark_lead_form' | 'manual' | 'unknown';
+
+    capturedAt?: string;
+
+    commercialChannel?: 'paid_media' | 'organic' | 'other';
+
+    meta?: Acquisition.Meta;
+
+    originDetail?: string;
+
+    provider?: 'meta';
+  }
+
+  export namespace Acquisition {
+    export interface Meta {
+      adId?: string;
+
+      adsetId?: string;
+
+      campaignId?: string;
+
+      formId?: string;
+
+      formName?: string;
+
+      leadgenId?: string;
+
+      pageId?: string;
+
+      pageName?: string;
+    }
+  }
 }
 
 export interface EntrypointsWhatsappConnectedWebhook {
@@ -1401,7 +1637,7 @@ export namespace MessagesReceivedWebhook {
 
       name: string | null;
 
-      platform: 'whatsapp' | 'whatsapp_lite' | 'instagram' | 'telegram';
+      platform: 'whatsapp' | 'whatsapp_lite' | 'instagram' | 'telegram' | 'lead_form';
 
       status: 'ongoing' | 'ignored' | 'completed';
 
@@ -1538,7 +1774,7 @@ export namespace MessagesReceivedWebhookPayload {
 
     name: string | null;
 
-    platform: 'whatsapp' | 'whatsapp_lite' | 'instagram' | 'telegram';
+    platform: 'whatsapp' | 'whatsapp_lite' | 'instagram' | 'telegram' | 'lead_form';
 
     status: 'ongoing' | 'ignored' | 'completed';
 
@@ -1690,7 +1926,7 @@ export namespace MessagesSentWebhook {
 
       name: string | null;
 
-      platform: 'whatsapp' | 'whatsapp_lite' | 'instagram' | 'telegram';
+      platform: 'whatsapp' | 'whatsapp_lite' | 'instagram' | 'telegram' | 'lead_form';
 
       status: 'ongoing' | 'ignored' | 'completed';
 
@@ -1836,7 +2072,7 @@ export namespace MessagesSentWebhookPayload {
 
     name: string | null;
 
-    platform: 'whatsapp' | 'whatsapp_lite' | 'instagram' | 'telegram';
+    platform: 'whatsapp' | 'whatsapp_lite' | 'instagram' | 'telegram' | 'lead_form';
 
     status: 'ongoing' | 'ignored' | 'completed';
 
@@ -1942,6 +2178,126 @@ export namespace MessagesSentWebhookPayload {
   }
 }
 
+export interface SaleWebhookPayload {
+  id: string;
+
+  amount: number;
+
+  chatId: string;
+
+  createdAt: string;
+
+  currency: string;
+
+  externalId: string | null;
+
+  occurredAt: string;
+
+  saleDate: string;
+
+  source: 'manual' | 'payment' | 'receipt' | 'api' | 'ecommerce';
+
+  status: 'pending' | 'confirmed' | 'cancelled' | 'reversed';
+
+  tenantId: string;
+}
+
+export interface SalesCancelledWebhook {
+  data: SalesCancelledWebhook.Data;
+
+  event: 'sales.cancelled';
+}
+
+export namespace SalesCancelledWebhook {
+  export interface Data {
+    id: string;
+
+    amount: number;
+
+    chatId: string;
+
+    createdAt: string;
+
+    currency: string;
+
+    externalId: string | null;
+
+    occurredAt: string;
+
+    saleDate: string;
+
+    source: 'manual' | 'payment' | 'receipt' | 'api' | 'ecommerce';
+
+    status: 'pending' | 'confirmed' | 'cancelled' | 'reversed';
+
+    tenantId: string;
+  }
+}
+
+export interface SalesConfirmedWebhook {
+  data: SalesConfirmedWebhook.Data;
+
+  event: 'sales.confirmed';
+}
+
+export namespace SalesConfirmedWebhook {
+  export interface Data {
+    id: string;
+
+    amount: number;
+
+    chatId: string;
+
+    createdAt: string;
+
+    currency: string;
+
+    externalId: string | null;
+
+    occurredAt: string;
+
+    saleDate: string;
+
+    source: 'manual' | 'payment' | 'receipt' | 'api' | 'ecommerce';
+
+    status: 'pending' | 'confirmed' | 'cancelled' | 'reversed';
+
+    tenantId: string;
+  }
+}
+
+export interface SalesReversedWebhook {
+  data: SalesReversedWebhook.Data;
+
+  event: 'sales.reversed';
+}
+
+export namespace SalesReversedWebhook {
+  export interface Data {
+    id: string;
+
+    amount: number;
+
+    chatId: string;
+
+    createdAt: string;
+
+    currency: string;
+
+    externalId: string | null;
+
+    occurredAt: string;
+
+    saleDate: string;
+
+    source: 'manual' | 'payment' | 'receipt' | 'api' | 'ecommerce';
+
+    status: 'pending' | 'confirmed' | 'cancelled' | 'reversed';
+
+    tenantId: string;
+  }
+}
+
 export type SparkWebhookBody =
   | MessagesReceivedWebhook
   | MessagesSentWebhook
@@ -1953,7 +2309,13 @@ export type SparkWebhookBody =
   | MessageTemplatesUpdatedWebhook
   | MessageTemplatesDeletedWebhook
   | MessageTemplatesStatusUpdatedWebhook
-  | MessageTemplatesCategoryUpdatedWebhook;
+  | MessageTemplatesCategoryUpdatedWebhook
+  | ChargesCreatedWebhook
+  | ChargesPaidWebhook
+  | ChargesRefundedWebhook
+  | SalesConfirmedWebhook
+  | SalesCancelledWebhook
+  | SalesReversedWebhook;
 
 export namespace SparkWebhookBody {
   export interface SparkWebhookBodyEntrypointsWhatsappHistorySynced {
@@ -1979,6 +2341,10 @@ export namespace SparkWebhookBody {
 
 export declare namespace Webhooks {
   export {
+    type ChargeWebhookPayload as ChargeWebhookPayload,
+    type ChargesCreatedWebhook as ChargesCreatedWebhook,
+    type ChargesPaidWebhook as ChargesPaidWebhook,
+    type ChargesRefundedWebhook as ChargesRefundedWebhook,
     type ChatsCreatedWebhook as ChatsCreatedWebhook,
     type ChatsCreatedWebhookPayload as ChatsCreatedWebhookPayload,
     type EntrypointsWhatsappConnectedWebhook as EntrypointsWhatsappConnectedWebhook,
@@ -1999,6 +2365,10 @@ export declare namespace Webhooks {
     type MessagesReceivedWebhookPayload as MessagesReceivedWebhookPayload,
     type MessagesSentWebhook as MessagesSentWebhook,
     type MessagesSentWebhookPayload as MessagesSentWebhookPayload,
+    type SaleWebhookPayload as SaleWebhookPayload,
+    type SalesCancelledWebhook as SalesCancelledWebhook,
+    type SalesConfirmedWebhook as SalesConfirmedWebhook,
+    type SalesReversedWebhook as SalesReversedWebhook,
     type SparkWebhookBody as SparkWebhookBody,
   };
 }

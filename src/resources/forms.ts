@@ -45,6 +45,8 @@ export namespace FormRetrieveResponse {
   export interface Form {
     id: string;
 
+    appearance: Form.Appearance | null;
+
     description: string | null;
 
     flow: Form.Flow;
@@ -55,6 +57,26 @@ export namespace FormRetrieveResponse {
   }
 
   export namespace Form {
+    export interface Appearance {
+      colors: Appearance.Colors | null;
+
+      completion: Appearance.Completion | null;
+    }
+
+    export namespace Appearance {
+      export interface Colors {
+        accent: string;
+
+        background: string;
+      }
+
+      export interface Completion {
+        message?: string;
+
+        title?: string;
+      }
+    }
+
     export interface Flow {
       connections: Array<Flow.Connection>;
 
@@ -220,10 +242,26 @@ export interface FormSubmitResponseParams {
 
   phone: string;
 
+  acquisition?: FormSubmitResponseParams.Acquisition;
+
   answers?: Array<FormSubmitResponseParams.Answer>;
 }
 
 export namespace FormSubmitResponseParams {
+  export interface Acquisition {
+    ref?: string;
+
+    utmCampaign?: string;
+
+    utmContent?: string;
+
+    utmMedium?: string;
+
+    utmSource?: string;
+
+    utmTerm?: string;
+  }
+
   export interface Answer {
     questionKey: string;
 

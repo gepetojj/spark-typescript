@@ -2,6 +2,10 @@
 
 Types:
 
+- <code><a href="./src/resources/webhooks.ts">ChargeWebhookPayload</a></code>
+- <code><a href="./src/resources/webhooks.ts">ChargesCreatedWebhook</a></code>
+- <code><a href="./src/resources/webhooks.ts">ChargesPaidWebhook</a></code>
+- <code><a href="./src/resources/webhooks.ts">ChargesRefundedWebhook</a></code>
 - <code><a href="./src/resources/webhooks.ts">ChatsCreatedWebhook</a></code>
 - <code><a href="./src/resources/webhooks.ts">ChatsCreatedWebhookPayload</a></code>
 - <code><a href="./src/resources/webhooks.ts">EntrypointsWhatsappConnectedWebhook</a></code>
@@ -22,6 +26,10 @@ Types:
 - <code><a href="./src/resources/webhooks.ts">MessagesReceivedWebhookPayload</a></code>
 - <code><a href="./src/resources/webhooks.ts">MessagesSentWebhook</a></code>
 - <code><a href="./src/resources/webhooks.ts">MessagesSentWebhookPayload</a></code>
+- <code><a href="./src/resources/webhooks.ts">SaleWebhookPayload</a></code>
+- <code><a href="./src/resources/webhooks.ts">SalesCancelledWebhook</a></code>
+- <code><a href="./src/resources/webhooks.ts">SalesConfirmedWebhook</a></code>
+- <code><a href="./src/resources/webhooks.ts">SalesReversedWebhook</a></code>
 - <code><a href="./src/resources/webhooks.ts">SparkWebhookBody</a></code>
 
 # WhatsappConnectionSessions
@@ -142,3 +150,33 @@ Methods:
 - <code title="patch /v1/message-templates/{id}">client.messageTemplates.<a href="./src/resources/message-templates.ts">update</a>(id, { ...params }) -> MessageTemplateUpdateResponse</code>
 - <code title="get /v1/message-templates">client.messageTemplates.<a href="./src/resources/message-templates.ts">list</a>() -> MessageTemplateListResponse</code>
 - <code title="delete /v1/message-templates/{id}">client.messageTemplates.<a href="./src/resources/message-templates.ts">delete</a>(id) -> void</code>
+
+# Charges
+
+Types:
+
+- <code><a href="./src/resources/charges.ts">ChargeCreateResponse</a></code>
+- <code><a href="./src/resources/charges.ts">ChargeRetrieveResponse</a></code>
+- <code><a href="./src/resources/charges.ts">ChargeListResponse</a></code>
+- <code><a href="./src/resources/charges.ts">ChargeCancelResponse</a></code>
+
+Methods:
+
+- <code title="post /v1/chats/{chatId}/charges">client.charges.<a href="./src/resources/charges.ts">create</a>(chatID, { ...params }) -> ChargeCreateResponse</code>
+- <code title="get /v1/charges/{chargeId}">client.charges.<a href="./src/resources/charges.ts">retrieve</a>(chargeID) -> ChargeRetrieveResponse</code>
+- <code title="get /v1/chats/{chatId}/charges">client.charges.<a href="./src/resources/charges.ts">list</a>(chatID) -> ChargeListResponse</code>
+- <code title="post /v1/charges/{chargeId}/cancel">client.charges.<a href="./src/resources/charges.ts">cancel</a>(chargeID) -> ChargeCancelResponse</code>
+
+# Sales
+
+Types:
+
+- <code><a href="./src/resources/sales.ts">SaleCreateResponse</a></code>
+- <code><a href="./src/resources/sales.ts">SaleRetrieveResponse</a></code>
+- <code><a href="./src/resources/sales.ts">SaleListResponse</a></code>
+
+Methods:
+
+- <code title="post /v1/chats/{chatId}/sales">client.sales.<a href="./src/resources/sales.ts">create</a>(chatID, { ...params }) -> SaleCreateResponse</code>
+- <code title="get /v1/sales/{saleId}">client.sales.<a href="./src/resources/sales.ts">retrieve</a>(saleID) -> SaleRetrieveResponse</code>
+- <code title="get /v1/sales">client.sales.<a href="./src/resources/sales.ts">list</a>({ ...params }) -> SaleListResponse</code>

@@ -15,6 +15,14 @@ export {
   type CampaignStartParams,
 } from './campaigns';
 export {
+  Charges,
+  type ChargeCreateResponse,
+  type ChargeRetrieveResponse,
+  type ChargeListResponse,
+  type ChargeCancelResponse,
+  type ChargeCreateParams,
+} from './charges';
+export {
   Chats,
   type ChatUpsertResponse,
   type ChatUpsertBatchResponse,
@@ -49,7 +57,19 @@ export {
   type MessagingUploadMediaParams,
 } from './messaging/messaging';
 export {
+  Sales,
+  type SaleCreateResponse,
+  type SaleRetrieveResponse,
+  type SaleListResponse,
+  type SaleCreateParams,
+  type SaleListParams,
+} from './sales';
+export {
   Webhooks,
+  type ChargeWebhookPayload,
+  type ChargesCreatedWebhook,
+  type ChargesPaidWebhook,
+  type ChargesRefundedWebhook,
   type ChatsCreatedWebhook,
   type ChatsCreatedWebhookPayload,
   type EntrypointsWhatsappConnectedWebhook,
@@ -70,6 +90,10 @@ export {
   type MessagesReceivedWebhookPayload,
   type MessagesSentWebhook,
   type MessagesSentWebhookPayload,
+  type SaleWebhookPayload,
+  type SalesCancelledWebhook,
+  type SalesConfirmedWebhook,
+  type SalesReversedWebhook,
   type SparkWebhookBody,
 } from './webhooks';
 export {
