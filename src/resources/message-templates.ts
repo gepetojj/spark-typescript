@@ -8,7 +8,9 @@ import { path } from '../internal/utils/path';
 
 export class MessageTemplates extends APIResource {
   /**
-   * Cria um modelo interno ou um modelo oficial de campanha na Meta.
+   * Cria um modelo interno ou um modelo oficial de campanha na Meta. O modelo
+   * oficial usa variáveis {{1}}, {{2}} no texto inteiro. Nome, idioma e categoria
+   * ficam fixos depois da criação.
    */
   create(
     body: MessageTemplateCreateParams,
@@ -26,7 +28,8 @@ export class MessageTemplates extends APIResource {
 
   /**
    * Edita o rótulo interno ou o conteúdo. Alterar o conteúdo de um modelo oficial
-   * aprovado ou rejeitado devolve o modelo para análise.
+   * aprovado ou rejeitado devolve o modelo para análise da Meta. Modelos pendentes
+   * não aceitam mudança de conteúdo.
    */
   update(
     id: string,
@@ -151,7 +154,14 @@ export namespace MessageTemplateCreateResponse {
 
     title: string;
 
-    source?: string;
+    source?:
+      | 'chat.name'
+      | 'chat.contact'
+      | 'chat.birthday'
+      | 'lead.name'
+      | 'lead.contact'
+      | 'lead.display_contact'
+      | (string & {});
   }
 }
 
@@ -252,7 +262,14 @@ export namespace MessageTemplateRetrieveResponse {
 
     title: string;
 
-    source?: string;
+    source?:
+      | 'chat.name'
+      | 'chat.contact'
+      | 'chat.birthday'
+      | 'lead.name'
+      | 'lead.contact'
+      | 'lead.display_contact'
+      | (string & {});
   }
 }
 
@@ -353,7 +370,14 @@ export namespace MessageTemplateUpdateResponse {
 
     title: string;
 
-    source?: string;
+    source?:
+      | 'chat.name'
+      | 'chat.contact'
+      | 'chat.birthday'
+      | 'lead.name'
+      | 'lead.contact'
+      | 'lead.display_contact'
+      | (string & {});
   }
 }
 
@@ -450,7 +474,14 @@ export declare namespace MessageTemplateCreateParams {
 
       title: string;
 
-      source?: string;
+      source?:
+        | 'chat.name'
+        | 'chat.contact'
+        | 'chat.birthday'
+        | 'lead.name'
+        | 'lead.contact'
+        | 'lead.display_contact'
+        | (string & {});
     }
   }
 
@@ -486,7 +517,14 @@ export declare namespace MessageTemplateCreateParams {
 
       title: string;
 
-      source?: string;
+      source?:
+        | 'chat.name'
+        | 'chat.contact'
+        | 'chat.birthday'
+        | 'lead.name'
+        | 'lead.contact'
+        | 'lead.display_contact'
+        | (string & {});
     }
   }
 }
@@ -557,7 +595,14 @@ export namespace MessageTemplateUpdateParams {
 
     title: string;
 
-    source?: string;
+    source?:
+      | 'chat.name'
+      | 'chat.contact'
+      | 'chat.birthday'
+      | 'lead.name'
+      | 'lead.contact'
+      | 'lead.display_contact'
+      | (string & {});
   }
 }
 

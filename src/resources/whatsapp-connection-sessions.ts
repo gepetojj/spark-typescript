@@ -48,7 +48,13 @@ export interface WhatsappConnectionSessionRetrieveResponse {
 
   message: string | null;
 
-  reason: 'expired' | 'token_exchange_failed' | 'phone_in_use' | 'funnel_not_found' | null;
+  reason:
+    | 'expired'
+    | 'token_exchange_failed'
+    | 'phone_in_use'
+    | 'funnel_not_found'
+    | 'phone_not_found'
+    | null;
 
   returnUrl: string | null;
 

@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.10.1](https://github.com/gepetojj/spark-typescript/compare/v0.10.0...v0.10.1) (2026-11-16)
+
+
+### Bug Fixes
+
+* **dash:** calendário mostra mês e dias da semana no idioma do app ([f8b866f](https://github.com/gepetojj/spark-typescript/commit/f8b866f7b417e4959f149d10c71d8d3ad1073c6f))
+
+## [0.10.0](https://github.com/gepetojj/spark-typescript/compare/v0.9.0...v0.10.0) (2026-10-13)
+
+
+### Features
+
+* **gateway-sdk:** webhook entrypoints.whatsapp.history_synced, origem business_app e motivo phone_not_found ([30f3037](https://github.com/gepetojj/spark-typescript/commit/30f3037d0343b2f8e266be68f898b27a97943944))
+
 ## [0.9.0](https://github.com/gepetojj/spark-typescript/compare/v0.8.0...v0.9.0) (2026-09-30)
 
 
